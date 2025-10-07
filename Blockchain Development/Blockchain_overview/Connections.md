@@ -1,17 +1,19 @@
-# Network Connections
+# Network Connections Topology
 
-## Inbound vs Outbound
-- Maintain mix to avoid eclipse attacks.
-- Limit per-IP connections to reduce Sybil exposure.
+## 1. Overlay Design
+- Hybrid mesh + structured overlays (Kademlia DHT) to balance discovery speed and resilience.
+- Region-aware peer selection to minimize latency and correlate failure domains.
 
-## Encryption & Authentication
-- TLS/Noise handshake with certificate pinning for validators.
-- Optional authenticated channels for compliance zones.
+## 2. Connection Lifecycle
+- Secure handshake (Noise/QUIC) with mutual authentication.
+- Peer scoring to penalize spam, low bandwidth, or malicious behavior.
+- Connection churn handling with backoff strategies and dialer heuristics.
 
-## Quality of Service
-- Prioritize consensus traffic over bulk data.
-- Implement congestion control (QUIC) and adaptive rate limiting.
+## 3. Instrumentation
+- Collect RTT, bandwidth, failure rates, peer reputation scores.
+- Visualize topology dynamics for capacity planning.
 
-## Monitoring
-- Connection health metrics: RTT, packet loss, throughput.
-- Automated remediation: connection resets, peer blacklisting.
+## 4. Research Directions
+- Adaptive networking that leverages SDN and satellite links.
+- Privacy-preserving peer sampling using differential privacy.
+- Multipath transport for censorship resistance.

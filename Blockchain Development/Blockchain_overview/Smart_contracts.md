@@ -1,27 +1,23 @@
-# Smart Contracts
+# Smart Contract Engineering
 
-## Principles
-- Deterministic execution, publicly verifiable results.
-- Upgradeability balanced with immutability (proxy patterns, timelocks, governance approvals).
+## 1. Lifecycle
+- Specification, formal modelling, development, audit, deployment, monitoring, upgrade.
 
-## Lifecycle
-1. Design & specification with formal models and threat assessments.
-2. Implementation with secure coding guidelines (reentrancy guards, overflow checks).
-3. Audit and formal verification.
-4. Deployment and on-chain monitoring (event logs, anomaly detection).
-5. Maintenance via governance-driven upgrades.
+## 2. Design Principles
+- Modular architecture, upgradeable proxies with governance safeguards.
+- Defense-in-depth: access controls, rate limits, invariant checks.
+- Gas efficiency through precomputations, storage packing, and caching.
 
-## Standards
-- Token interfaces (ERC-20/721/1155 analogs).
-- Governance modules (voting, delegation, quorum calculation).
-- Cross-chain messaging adapters.
+## 3. Tooling
+- DSLs (Move, Solidity, Rust-based frameworks) with linting and static analysis (Slither, Securify, Manticore).
+- Formal verification (Coq, Dafny, Certora).
+- Runtime monitoring (Forta-like agents, transaction simulators).
 
-## Developer Tooling
-- SDKs, language support (Solidity, Move, Rust, Sway).
-- Test frameworks (Hardhat, Foundry, Anchor) integrated with CI.
-- Static and dynamic analysis (Slither, Echidna, Manticore).
+## 4. Compliance
+- Embed legal agreements via Ricardian contracts.
+- Provide audit logs, on-chain metadata, and upgrade notices.
 
-## Compliance & Risk
-- Documentation for regulatory review.
-- Kill switches for high-risk modules with transparent procedures.
-- Insurance pools and bug bounty programs.
+## 5. Research Agenda
+- Intent-based architectures decoupling user goals from execution paths.
+- Autonomous agent frameworks using reinforcement learning with safety constraints.
+- Privacy-preserving smart contracts via multi-party computation and zero-knowledge.

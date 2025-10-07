@@ -1,12 +1,12 @@
-# Starting Scripts Inventory
+# Starter Script Catalogue
 
-1. `init-network.sh` – bootstrap genesis configuration and keypairs.
-2. `start-validator.sh` – launch validator node with monitoring hooks.
-3. `start-fullnode.sh` – start full node with archival/pruned options.
-4. `deploy-contracts.py` – orchestrate initial contract deployments.
-5. `fund-accounts.py` – distribute genesis allocations to stakeholders.
-6. `setup-governance.sh` – initialize governance parameters and council seats.
-7. `launch-explorer.sh` – deploy block explorer backend services.
-8. `launch-wallet-backend.sh` – start API services for wallet GUI.
-9. `configure-monitoring.sh` – setup Prometheus, Grafana, alertmanager.
-10. `backup-state.sh` – schedule snapshotting and storage upload.
+1. **NodeBootstrap.sh** — Automates validator setup, security hardening, and monitoring agent installation.
+2. **GenesisGenerator.py** — Produces genesis state from configuration manifests.
+3. **KeyRotation.mjs** — Manages MPC key rotation with audit logs.
+4. **UpgradeOrchestrator.go** — Coordinates rolling binary upgrades and health checks.
+5. **DisasterRecovery.ps1** — Windows-friendly restoration workflow for compliance partners.
+6. **TelemetryCollector.py** — Streams metrics to observability stack, applies differential privacy.
+7. **SnapshotValidator.rs** — Verifies state snapshot integrity using Merkle proofs.
+8. **BridgeMonitor.ts** — Watches cross-chain bridge activity, triggers alarms.
+9. **GovernanceReporter.py** — Generates governance participation reports.
+10. **IncidentResponder.sh** — Templated actions for security incidents and alerts.

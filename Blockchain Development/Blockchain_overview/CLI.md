@@ -1,20 +1,24 @@
-# Command Line Interface (CLI)
+# Command-Line Interface Strategy
 
-## Objectives
-- Provide developers and operators with powerful tooling for managing nodes, accounts, and smart contracts.
+## 1. Objectives
+Deliver a reproducible, scriptable interface for node operators, developers, and auditors with role-based access and automation hooks.
 
-## Core Commands
-- `node` subcommands for start/stop, config management, health checks.
-- `account` management for key generation, import/export, delegation.
-- `tx` submission with offline signing support.
-- `governance` commands for proposal lifecycle.
-- `debug` utilities for tracing transactions and profiling.
+## 2. Functional Areas
+- **Node lifecycle:** init, join, upgrade, snapshot management.
+- **Key management:** generation, import/export, MPC coordination.
+- **Diagnostics:** log streaming, metrics export, network topology inspection.
+- **Governance:** proposal submission, voting, parameter queries.
 
-## UX Enhancements
-- Interactive prompts, auto-completion, context-aware help.
-- Configurable output formats (JSON, YAML, table).
-- Secure credential storage and hardware wallet integration.
+## 3. Architecture
+- Built with Rust/Go for portability; leverages plugin architecture and declarative command schemas.
+- Configurable output formats (JSON, YAML, table) for integration with CI/CD and observability stacks.
+- Secure credential storage with OS keychains or HSM connectors.
 
-## Extensibility
-- Plugin architecture allowing custom modules.
-- Scripting support via embedded interpreters (Python/Lua).
+## 4. Usability Enhancements
+- Autocomplete, contextual help, and command templates.
+- Dry-run mode to simulate transactions.
+- Script generators for complex workflows (staking, upgrades).
+
+## 5. Compliance & Security
+- Role-based access control, audit logging, and tamper-proof command history.
+- Signed releases with reproducible builds, checksum verification.

@@ -1,21 +1,20 @@
-# Block Types
+# Block Typology
 
-## Execution Blocks
-- Contain full transactions and state transitions.
-- Primary vehicle for fee revenue and MEV capture.
+## 1. Classification
+- **Execution blocks:** Carry transactions and state transitions.
+- **Attestation blocks:** Contain votes attestations (e.g., Ethereum Beacon chain).
+- **Checkpoint blocks:** Mark governance-approved milestones or emergency restarts.
+- **Empty blocks:** Produced under congestion or when proposer is offline; must be monitored for abuse.
+- **MEV bundles:** Auxiliary blocks containing ordered transactions for builder markets.
 
-## Data Blobs / Availability Blocks
-- Carry large calldata for rollups, not directly executed by L1.
-- Require sampling-based validation and erasure coding.
+## 2. Metadata Standards
+- Field definitions for gas metrics, proposer identity, randomness seeds.
+- Extensions for rollup payloads, cross-chain messages, and embedded proofs.
 
-## Finality/Checkpoint Blocks
-- Aggregated validator signatures establishing irreversible checkpoints.
-- Aid light clients and cross-chain bridges.
+## 3. Governance Hooks
+- Policy for empty block frequency, slashing thresholds, and reward adjustments.
+- Specialized block types (e.g., upgrade activation blocks) requiring DAO approval.
 
-## Epoch Summary Blocks
-- Summaries of validator performance, reward distribution, slash events.
-- Feed into governance analytics and compliance reporting.
-
-## Special Blocks
-- **Genesis Block**: Bootstraps chain state.
-- **Emergency Blocks**: Trigger protocol-level circuit breakers under governance approval.
+## 4. Research Agenda
+- Dynamic block classification using machine learning for anomaly detection.
+- Formal grammars for block metadata enabling composability across chains.

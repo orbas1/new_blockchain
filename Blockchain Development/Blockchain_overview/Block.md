@@ -1,17 +1,22 @@
-# Block Structure
+# Block Composition Blueprint
 
-## Components
-- Header: parent hash, state root, transaction root, receipt root, timestamp, difficulty/validator info.
-- Body: ordered list of transactions, uncle/ommer references, metadata (e.g., attestations).
-- Signatures: proposer signatures, aggregate BLS signatures for votes.
+## 1. Structure
+- **Header:** Parent hash, state root, transactions root, receipts root, timestamp, proposer identity, consensus metadata.
+- **Body:** Ordered transactions, attestations, consensus votes, and optional MEV bundles.
+- **Auxiliary data:** Prover transcripts, zk-SNARK proofs, or fraud proof commitments depending on scaling strategy.
 
-## Validation Steps
-1. Verify header fields and consensus-specific requirements.
-2. Validate proposer identity and signatures.
-3. Execute transactions in order, updating state transitions.
-4. Confirm resulting state root matches header commitment.
+## 2. Construction Pipeline
+1. Transaction selection with fee prioritization and inclusion lists.
+2. Execution simulation to ensure gas limits and state access sets.
+3. Header assembly with cryptographic commitments.
+4. Broadcast via gossip and propagation optimization (compact block relay).
 
-## Optimization Considerations
-- Include metadata for MEV transparency (bundle commitments, fee recipients).
-- Support variable block sizes with gas limits tuned to hardware capabilities.
-- Provide additional channels for blob data (EIP-4844 style) to separate execution and DA.
+## 3. Quality Controls
+- Deterministic serialization (RLP/SSZ) to avoid consensus splits.
+- Block validity rules encoded in formal specs and fuzz-tested.
+- Telemetry capturing gas utilization, MEV capture, and execution anomalies.
+
+## 4. Research Agenda
+- Proposer-builder separation markets for fair ordering.
+- Inclusion proofs for cross-chain bridging and rollups.
+- Adaptive block sizes based on network congestion and latency targets.

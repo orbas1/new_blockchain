@@ -1,21 +1,18 @@
 # Rewards Framework
 
-## Reward Sources
-- Block proposal rewards and transaction fees.
-- MEV redistribution through auctions or PBS revenue sharing.
-- Inflationary issuance directed to validators, delegators, ecosystem funds.
+## 1. Reward Streams
+- Block rewards, transaction fees, MEV redistribution, treasury subsidies.
 
-## Allocation Models
-- Proportional to stake with performance multipliers.
-- Tiered incentives for infrastructure contributions (oracle operators, relayers).
-- Quadratic funding for community initiatives funded from treasury.
+## 2. Allocation Principles
+- Align with security budget, decentralization goals, and community incentives.
+- Differentiated rewards for proposers, attesters, relayers, and infrastructure providers.
 
-## Distribution Controls
-- Auto-compounding vs. manual claim.
-- Delegation splits between validator and delegators with configurable commission.
-- Transparency dashboards showing reward history and APY.
+## 3. Distribution Mechanics
+- On-chain accrual with epoch accounting.
+- Delegation models with configurable commissions.
+- Transparency via explorer dashboards and staking analytics.
 
-## Sustainability
-- Balance security budget with monetary inflation.
-- Introduce burn mechanisms to offset issuance (EIP-1559 style).
-- Periodic governance reviews of reward parameters.
+## 4. Research Agenda
+- Quadratic staking rewards to favor smaller validators.
+- Retroactive public goods funding tied to protocol KPIs.
+- Token engineering simulations to stress-test reward policy.

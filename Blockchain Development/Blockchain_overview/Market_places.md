@@ -1,18 +1,15 @@
-# Marketplaces
+# Marketplace Strategy
 
-## Types
-- NFT marketplaces (primary and secondary sales).
-- Token exchange venues (AMMs, orderbooks).
-- Data marketplaces (oracle data, analytics feeds).
-- Compute and storage marketplaces for decentralized infrastructure.
+## 1. Types
+- NFT marketplaces, DeFi exchanges, data marketplaces, compute markets.
 
-## Features
-- On-chain order management and escrow.
-- Royalty enforcement and revenue sharing.
-- Reputation systems and dispute resolution.
-- Fiat on/off ramps and compliance tooling.
+## 2. Architecture
+- Order books vs AMMs, off-chain order relay, on-chain settlement.
+- Curation, discovery, reputation systems.
 
-## Security & Compliance
-- KYC/AML modules for regulated assets.
-- Anti-fraud analytics and monitoring.
-- Smart contract audits and insurance coverage.
+## 3. Compliance
+- KYC/AML, royalties, intellectual property.
+
+## 4. Research Agenda
+- Cross-market liquidity routing.
+- DAO-governed marketplace parameters.

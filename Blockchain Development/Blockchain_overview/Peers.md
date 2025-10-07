@@ -1,16 +1,15 @@
-# Peer Topology
+# Peer Management
 
-## Peer Discovery
-- Bootnodes with static addresses.
-- mDNS and DNS-based discovery for local/regional peers.
-- Peer exchange protocols (gossip-based sampling).
+## 1. Discovery
+- Bootnodes, DNS seeds, DHT crawling, cross-chain peer lists.
 
-## Connection Management
-- Maintain target peer count with inbound/outbound balance.
-- Reputation scoring to avoid eclipse attacks.
-- Encryption via TLS/Noise protocol for privacy and integrity.
+## 2. Reputation
+- Score based on uptime, bandwidth, protocol adherence.
+- Penalize spam, drop, or malicious behavior.
 
-## Monitoring
-- Track peer churn, latency, bandwidth usage.
-- Detect anomalous behavior (spam, invalid blocks, fork attempts).
-- Provide dashboards for network operations center.
+## 3. Privacy
+- Tor/I2P support, mixnets, and differential privacy metrics.
+
+## 4. Research Agenda
+- Self-healing peer networks via reinforcement learning.
+- Federated learning for peer scoring models.

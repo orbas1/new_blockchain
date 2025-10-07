@@ -1,22 +1,20 @@
-# Non-Fungible Tokens (NFTs)
+# NFT Strategy
 
-## Standards
-- Core metadata schema with on-chain/off-chain storage pointers.
-- Royalty enforcement via metadata fields and marketplace compliance.
-- Multi-asset NFTs supporting composability (ERC-1155 analogue).
+## 1. Taxonomy
+- Art, collectibles, gaming assets, identity credentials, supply chain proofs.
 
-## Use Cases
-- Digital art, collectibles, and cultural artifacts.
-- Real-world asset tokenization (titles, deeds, certifications).
-- Gaming items, metaverse wearables, virtual land.
-- Access control tokens for events, gated communities.
+## 2. Standards
+- ERC-721, ERC-1155, composable NFTs, soulbound tokens.
+- Metadata best practices (IPFS, Arweave, JSON schemas).
 
-## Technical Considerations
-- Metadata integrity (IPFS, Arweave, decentralized storage).
-- Fractionalization via wrapper contracts.
-- Soulbound constraints for non-transferable credentials.
+## 3. Lifecycle
+- Minting, provenance tracking, royalties, fractionalization, collateralization.
 
-## Market Infrastructure
-- Auction formats (English, Dutch, sealed bid).
-- Secondary market royalties distribution.
-- Compliance modules for AML, sanctioned addresses.
+## 4. Compliance
+- Copyright, AML screening, securities considerations.
+- Cultural heritage protection and authenticity verification.
+
+## 5. Research Agenda
+- Dynamic NFTs with on-chain/off-chain data fusion.
+- Zero-knowledge ownership proofs and privacy-preserving transfers.
+- NFT financialization risk modelling.

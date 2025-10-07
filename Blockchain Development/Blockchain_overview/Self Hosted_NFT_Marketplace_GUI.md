@@ -1,20 +1,25 @@
-# Self-Hosted NFT Marketplace GUI
+# Self-Hosted NFT Marketplace GUI Specification
 
-## Deployment Goals
-- Enable creators and institutions to operate branded NFT storefronts.
+## 1. Objectives
+Enable creators and enterprises to deploy branded NFT marketplaces with full control over curation, compliance, and economics.
 
-## Features
-- Inventory management (minting, listing, batch upload).
-- Customizable storefront themes and landing pages.
-- Payment integrations (crypto, stablecoins, fiat gateways).
-- Royalty configuration and analytics dashboards.
+## 2. Core Modules
+- **Listing manager:** Batch minting, metadata editing, royalty configuration.
+- **Marketplace storefront:** Customizable storefront, search, filters, and recommendations.
+- **Transaction console:** Real-time sales analytics, royalty payouts, tax reports.
+- **Community tools:** Auctions, drops, gated access, and community voting.
 
-## Technical Requirements
-- Connect to marketplace smart contracts via API.
-- IPFS/Arweave integration for media hosting.
-- Role management for admins, curators, support staff.
+## 3. Compliance & Security
+- Optional KYC gating, sanctions screening, and provenance verification.
+- Custodial/non-custodial wallet integrations with risk scoring.
+- Audit logging, content moderation workflows, takedown procedures.
 
-## Security & Compliance
-- Moderation tools, content takedown workflows.
-- KYC/AML modules for regulated issuers.
-- Audit logs and exportable compliance reports.
+## 4. Extensibility
+- Plugin system for new sale formats (Dutch auctions, bonding curves).
+- Integration with DeFi primitives (lending, fractionalization) and cross-chain bridges.
+- White-label deployment scripts and infrastructure-as-code templates.
+
+## 5. Research Agenda
+- Dynamic pricing algorithms using machine learning.
+- Privacy-preserving patron interactions via zero-knowledge proofs.
+- NFT sustainability metrics and carbon offset tracking.

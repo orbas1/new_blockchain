@@ -1,15 +1,21 @@
-# Reward Timing
+# Reward Timing Analysis
 
-## Concepts
-- Defines cadence for distributing validator/miner rewards.
-- Impacts compounding yield, liquidity, and security responsiveness.
+## 1. Emission Cadence
+- Block-level rewards vs epoch-based payouts.
+- Deferred distribution to allow slashing adjudication.
+- Streaming rewards for real-time accrual (continuous compounding).
 
-## Options
-- Per-block payouts with immediate crediting.
-- Epoch-based distribution aligning with finality checkpoints.
-- Deferred vesting with lockups to discourage short-term attacks.
+## 2. Economic Considerations
+- Align reward timing with validator cash-flow needs and tax obligations.
+- Smooth issuance to prevent supply shocks.
+- Incentivize long-term staking via vesting multipliers.
 
-## Considerations
-- Balance between frequent payouts (better cash flow) and gas efficiency.
-- Handling slashing deductions before disbursement.
-- Accounting standards for treasury reporting.
+## 3. Implementation
+- On-chain reward accumulator contracts with precise accounting.
+- Retroactive adjustments for missed attestations or penalties.
+- Transparent dashboards for validator accounting.
+
+## 4. Research Directions
+- Predictive models adjusting cadence based on network health.
+- Cross-chain synchronization of reward epochs for shared security systems.
+- Integration with real-world asset yields (staking-as-a-service).

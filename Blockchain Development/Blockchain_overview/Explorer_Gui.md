@@ -1,17 +1,22 @@
-# Explorer GUI (Variant)
+# Explorer GUI (End-User Perspective)
 
-## Feature Enhancements
-- Modular dashboard allowing saved views for compliance teams.
-- Integration with alerts: suspicious activity notifications, staking performance alerts.
-- Advanced search with boolean logic and regex support.
+## 1. User Journeys
+- **Retail investors:** Track balances, staking rewards, and token transfers.
+- **Developers:** Debug contract deployments, inspect logs, monitor gas usage.
+- **Compliance officers:** Audit transaction provenance, identify anomalous flows.
 
-## Data Sources
-- Real-time WebSocket streams, historical indexing databases, off-chain analytics.
+## 2. Feature Checklist
+- Search by address, transaction hash, ENS-style names.
+- Multi-chain view with sidechain and rollup integration.
+- Time-travel interface to inspect historical state at specific blocks.
+- Graph analytics to visualize token flows and wallet clusters.
 
-## Customization
-- White-label themes for institutional partners.
-- Role-based access with granular permissions.
+## 3. Data Integrity
+- Cross-verify data with full nodes and light clients.
+- Provide cryptographic proofs (Merkle/Verkle) for displayed values.
+- Maintain tamper-evident audit log of UI queries for compliance.
 
-## Export & Reporting
-- Scheduled reports delivered via email/SFTP.
-- API token management for enterprise clients.
+## 4. Extensibility
+- Plugin architecture for ecosystem dashboards.
+- Webhooks and streaming APIs for analytics partners.
+- Customizable theming, branding, and white-label options.

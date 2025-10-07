@@ -1,50 +1,31 @@
-# Starting Smart Contract Details
+# Starter Smart Contract Suite (Expanded)
 
-## Governance Module
-- Handles proposal submission, voting, execution with configurable quorum.
-- Integrates with timelock and emergency pause system.
+## 1. Governance Contracts
+- **ConstitutionModule:** Stores bylaws, amendment procedures, emits change events.
+- **VotingHub:** Supports multiple voting strategies (quadratic, conviction).
+- **DelegateRegistry:** Tracks delegate relationships with transparency metrics.
 
-## Treasury Vault
-- Multi-signature/MPC-controlled vault with streaming payouts.
-- Supports diversification into multiple assets with risk parameters.
+## 2. Treasury & Finance
+- **TreasuryVault:** Multi-asset custody with access policies and audit logs.
+- **GrantAllocator:** Milestone-based payouts, KPI oracles, clawback triggers.
+- **FeeRouter:** Distributes protocol revenue to staking, insurance, and public goods.
 
-## Staking & Validator Registry
-- Manages validator onboarding, stake bonding, performance tracking.
-- Emits events for rewards and penalties.
+## 3. Infrastructure
+- **ValidatorStaking:** Bond management, slashing, reward accounting.
+- **BridgeGateway:** Cross-chain deposit/withdraw with fraud proofs.
+- **UpgradeController:** Timelocked upgrades with emergency halt.
 
-## Delegation and Rewards Distributor
-- Aggregates delegator stakes, calculates reward splits, handles compounding.
+## 4. Ecosystem & User Experience
+- **IdentityPassport:** Verifiable credentials, privacy-preserving proofs.
+- **MarketplaceCore:** Orderbook/AMM hybrid for digital assets.
+- **NFTFactory:** Modular minting with royalty registries and provenance tracking.
 
-## Penalty & Slashing Manager
-- Processes evidence of misbehavior, slashes stake, reallocates to insurance fund.
+## 5. Security & Monitoring
+- **GuardianMultisig:** Emergency shutdown with quorum and audit trails.
+- **MetricsEmitter:** On-chain events for operational telemetry.
+- **BugBountyEscrow:** Escrow for disclosed vulnerabilities with dispute resolution.
 
-## Fee Splitter Contract
-- Receives collected fees, distributes per governance-defined ratios.
-
-## Token Factory
-- Deploys fungible tokens, NFTs, and soulbound tokens with standardized interfaces.
-- Includes compliance hooks (whitelists, transfer restrictions).
-
-## Cross-Chain Bridge Adapter
-- Locks assets, emits events for relayers, verifies proofs for inbound transfers.
-
-## Oracle Registry & Data Feed Manager
-- Registers oracle providers, manages staking, handles data submissions and dispute resolution.
-
-## Layer-2 Rollup Anchor Contract
-- Stores rollup state roots, processes validity/fraud proofs, manages exits.
-
-## NFT Marketplace Core
-- Enables listings, bids, auctions, royalty enforcement, and fee distribution.
-
-## Identity Credential Registry
-- Issues and revokes verifiable credentials, integrates with privacy-preserving proofs.
-
-## DAO Membership Contract
-- Tracks membership tiers, gating access to governance processes.
-
-## Insurance Pool Contract
-- Manages pooled funds, underwrites slashing insurance, handles claims.
-
-## Emergency Pause Guardian
-- Allows authorized actors to pause high-risk contracts with strict unpause procedures.
+## 6. Research Agenda
+- Autonomously upgrading contracts using formal verification pipelines.
+- Integration with zk-proofs for confidential operations.
+- Cross-chain contract orchestration and state synchronization.

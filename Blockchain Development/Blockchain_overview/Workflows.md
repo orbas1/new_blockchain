@@ -1,18 +1,14 @@
 # Operational Workflows
 
-## Key Workflows
-- Validator onboarding and offboarding.
-- Software upgrade deployment (staging → mainnet).
-- Incident response for security breaches or outages.
-- Treasury grant disbursement and reporting.
-- Governance proposal lifecycle.
+## 1. Categories
+- Network deployment, validator onboarding, governance proposals, incident response, upgrade management.
 
-## Documentation
-- Standard operating procedures with RACI matrices.
-- Runbooks stored in version-controlled repositories.
-- Checklists for compliance audits and regulatory filings.
+## 2. Automation
+- CI/CD pipelines, infrastructure-as-code, runbooks encoded as machine-readable playbooks.
 
-## Automation
-- CI/CD pipelines for node software releases.
-- ChatOps integrations for governance notifications.
-- Automated backups and failover processes.
+## 3. Compliance
+- Change management approvals, audit logs, regulatory reporting.
+
+## 4. Research Agenda
+- Autonomous agents executing workflows under human oversight.
+- Digital twins for rehearsal of upgrades and incidents.

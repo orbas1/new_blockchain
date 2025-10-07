@@ -1,31 +1,24 @@
 # API Endpoint Catalogue
 
-## Node RPC
-- `eth_blockNumber`
-- `eth_getBlockByNumber`
-- `eth_getTransactionReceipt`
-- `eth_call`
-- `eth_sendRawTransaction`
+## Consensus & Node Health
+- `/health` — Node diagnostics.
+- `/consensus/status` — Current epoch, view, validator set.
+- `/metrics` — Prometheus-formatted metrics.
 
-## Governance API
-- `gov/proposals`
-- `gov/proposals/{id}`
-- `gov/proposals/{id}/votes`
-- `gov/parameters`
+## Ledger & State
+- `/block/{height}` — Block details with proofs.
+- `/state/{address}` — Account/state query with Merkle proof.
+- `/transactions/pending` — Mempool snapshot.
 
-## Staking API
-- `staking/validators`
-- `staking/validators/{id}`
-- `staking/delegations/{address}`
-- `staking/rewards/{address}`
+## Governance
+- `/governance/proposals` — Proposal list, status, metadata.
+- `/governance/votes` — Vote breakdown by delegations.
 
-## Token API
-- `tokens/list`
-- `tokens/{contract}/holders`
-- `tokens/{contract}/transfers`
+## Ecosystem
+- `/tokens/{id}` — Token metadata, supply, holders.
+- `/nfts/{collection}` — NFT attributes and provenance.
+- `/marketplace/orders` — Order book snapshots.
 
-## Analytics API
-- `analytics/tps`
-- `analytics/finality`
-- `analytics/fee-distribution`
-- `analytics/validator-performance`
+## Tooling
+- `/telemetry/stream` — Websocket telemetry.
+- `/analytics/reports` — Generated insights, risk reports.

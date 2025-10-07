@@ -1,25 +1,25 @@
-Hashing Strategies
-==================
+# Hashing Strategy (Expanded)
 
-Purpose
--------
-- Provide collision-resistant commitments for blocks, transactions, and state.
-- Enable Merkle tree constructions and succinct proofs.
+## 1. Objectives
+Provide collision-resistant commitments for blocks, transactions, state, and off-chain data feeds while enabling verifiable data structures.
 
-Algorithms
-----------
-- SHA-2 family for compatibility.
-- SHA-3/Keccak for Ethereum-style addresses.
-- BLAKE3 for high throughput and SIMD acceleration.
-- Poseidon/Rescue for zero-knowledge friendly hashing inside circuits.
+## 2. Algorithm Portfolio
+- **SHA-2/3:** Compatibility with existing ecosystems and hardware acceleration.
+- **BLAKE3:** High throughput, SIMD-friendly for bandwidth-heavy workloads.
+- **Poseidon/Rescue:** SNARK-friendly hashes for zero-knowledge circuits.
+- **KangarooTwelve:** Lightweight sponge construction for embedded devices.
 
-Implementation Notes
---------------------
-- Constant-time implementations to avoid timing leaks.
-- Domain separation tags for different object types.
-- Support for hash-to-curve operations (BLS signatures, VRFs).
+## 3. Engineering Practices
+- Domain separation tags for block headers, transactions, receipts, and consensus messages.
+- Constant-time implementations vetted via side-channel audits.
+- Hash-to-curve support for BLS signatures and VRFs.
+- Periodic algorithm agility reviews for post-quantum preparedness.
 
-Roadmap
--------
-- Evaluate post-quantum hash functions.
-- Hardware acceleration via Intel SHA extensions and ARM Cryptography Extensions.
+## 4. Tooling & Monitoring
+- Hash collision monitoring, differential testing across clients, fuzzers for serialization.
+- Telemetry on hash computation latency to inform hardware investments.
+
+## 5. Research Agenda
+- Verifiable delay hash functions for randomness beacons.
+- Multi-party computation for distributed hashing in rollup circuits.
+- Quantum-resistant hash selection strategies.

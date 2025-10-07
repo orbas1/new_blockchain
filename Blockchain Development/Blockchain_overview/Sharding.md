@@ -1,25 +1,30 @@
-# Sharding
+# Sharding Roadmap
 
-## Goals
-- Partition blockchain state and transaction processing across multiple shards to scale throughput.
+## 1. Goals
+Partition network responsibilities to achieve horizontal scalability while maintaining security via cryptographic sampling and robust cross-shard communication.
 
-## Architectures
-- **Execution Sharding**: Different shards execute transactions with cross-shard messaging (Eth2 vision).
-- **Data Availability Sharding**: Shards provide data sampling security (Danksharding, Proto-Danksharding).
-- **Network Sharding**: Separate gossip layers for shards with cross-link committees.
+## 2. Shard Types
+- **State sharding:** Partition global state, requiring cross-shard contract calls.
+- **Transaction sharding:** Route transactions to shards without splitting state (useful for payments).
+- **Data availability sharding:** Provide scalable data blobs for rollups (Danksharding).
 
-## Key Components
-- Beacon chain coordinating shard committees.
-- Cross-shard communication protocols (asynchronous message queues, receipts).
-- Collation builders and proposer-builder separation for MEV mitigation.
+## 3. Architecture
+1. **Beacon/Coordinator chain:** Manages validator assignments, randomness, and cross-shard finality.
+2. **Shard chains:** Execute transactions, maintain local state, produce shard blocks.
+3. **Cross-shard messaging:** Employ asynchronous message queues or synchronous commits with receipts.
+4. **Execution environments:** Could be homogeneous (identical VM) or heterogeneous (custom logic per shard).
 
-## Challenges
-- Ensuring atomic composability across shards (use asynchronous bridging or rollup overlays).
-- Load balancing and hotspot mitigation.
-- Validator assignment randomness and unbiasable sampling.
-- Handling shard reconfiguration and data availability attacks.
+## 4. Validator Workflow
+- Random sampling with VRFs to resist adaptive corruption.
+- Committee attestation aggregation using BLS to reduce bandwidth.
+- Slashing for availability faults (missing attestations) and invalid block production.
 
-## Research Directions
-- Use of zero-knowledge proofs for cross-shard validation.
-- Adaptive sharding where shard count expands/shrinks based on demand.
-- Integration with rollup-centric roadmap for modular scalability.
+## 5. Challenges & Mitigations
+- **Cross-shard atomicity:** Use two-phase commit, optimistic concurrency, or rollup-style receipts.
+- **Data availability:** Implement erasure-coded data and light-client sampling.
+- **Complexity:** Provide developer tooling that abstracts shard topology and cross-shard messaging libraries.
+
+## 6. Research Directions
+- Executable formal models for cross-shard smart contracts.
+- Prover markets for validity proofs ensuring shard correctness.
+- Adaptive sharding where shard count adjusts to demand using on-chain auctions.

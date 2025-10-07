@@ -1,24 +1,17 @@
-# Transaction Lifecycle
+# Transaction Pipeline
 
-## Phases
-1. Creation by user or smart contract.
-2. Signing with private key or delegated authority.
-3. Submission to mempool via RPC or gossip.
-4. Prioritization by fee market and inclusion into block.
-5. Execution in VM, state transition recorded.
-6. Finalization and archival.
+## 1. Lifecycle
+- Creation, signing, submission, propagation, execution, settlement.
 
-## Transaction Types
-- Simple transfers.
-- Contract deployment and calls.
-- Batch transactions and meta-transactions.
-- Cross-chain messages and rollup proofs.
+## 2. Structure
+- Fields: nonce, gas, signatures, calldata, metadata.
 
-## Mempool Design
-- Priority queue by effective gas price.
-- Spam prevention via base fee and minimum gas price.
-- Privacy enhancements (encrypted mempools, private orderflow).
+## 3. Mempool Strategy
+- Fee markets, priority queuing, spam mitigation, inclusion lists.
 
-## Observability
-- APIs for pending transactions, confirmation tracking.
-- Alerts for stuck transactions and gas spikes.
+## 4. Monitoring
+- Pending queue metrics, dropped transaction analysis, user-facing status APIs.
+
+## 5. Research Agenda
+- Intent-based transactions and order flow auctions.
+- Privacy-enhancing transactions (stealth addresses, shielded pools).

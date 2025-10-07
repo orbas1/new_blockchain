@@ -1,26 +1,29 @@
-Token Grading Framework
-=======================
+# Token Grading Methodology
 
-Grading Criteria
-----------------
-- **Utility Alignment (0-5)**: Degree to which token utility is integral to protocol.
-- **Security/Collateral Quality (0-5)**: Strength of backing assets or economic guarantees.
-- **Liquidity Depth (0-5)**: Market access, exchange listings, on-chain liquidity.
-- **Compliance Readiness (0-5)**: Regulatory clarity, KYC/AML controls, legal opinions.
-- **Governance Impact (0-5)**: Voting rights, delegation health, participation incentives.
-- **Sustainability (0-5)**: Emission schedule, treasury diversification, burn mechanisms.
+## 1. Evaluation Axes
+- **Utility Realization:** Degree to which the token delivers promised functionality.
+- **Economic Sustainability:** Revenue capture, cost structure, inflation control.
+- **Governance Quality:** Transparency, decentralization, dispute resolution.
+- **Security & Compliance:** Audit history, regulatory posture, custody resilience.
+- **Adoption Metrics:** User base growth, integrations, network effects.
 
-Grade Bands
------------
-- **A (24-30)**: Institutional-grade tokens suitable for treasury reserves.
-- **B (18-23)**: Strong fundamentals with manageable risks; monitor liquidity.
-- **C (12-17)**: Emerging tokens needing additional due diligence.
-- **D (6-11)**: High risk; speculative exposure only.
-- **F (0-5)**: Failing metrics; avoid or deprecate.
+## 2. Scoring Model
+- Weighted multi-criteria decision analysis (MCDA).
+- Combine quantitative data (on-chain metrics) with expert surveys.
+- Normalize scores 0-5, compute composite grade (A-F).
 
-Assessment Workflow
--------------------
-1. Collect quantitative metrics (TVL, volume, volatility) and qualitative assessments (governance scorecards).
-2. Assign rubric scores per criterion with reviewer comments.
-3. Publish report with remediation recommendations.
-4. Schedule periodic re-evaluation (quarterly) or triggered reviews on major events.
+## 3. Process
+1. Data ingestion pipeline aggregating on-chain analytics, financials, and market data.
+2. Expert review committee validates assumptions, flags anomalies.
+3. Publish scorecards with narrative commentary and risk warnings.
+4. Continuous monitoring triggers grade revisions based on thresholds.
+
+## 4. Tooling
+- Dashboard with scenario analysis and sensitivity testing.
+- API for downstream products (wallet risk badges, exchange listings).
+- Automated alerting for rapid degradation (security incidents, governance failures).
+
+## 5. Research Agenda
+- Explainable AI for token risk classification.
+- Integration with regulatory sandboxes and rating agencies.
+- Behavioral finance studies on grade impact to market dynamics.

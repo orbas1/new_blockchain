@@ -1,102 +1,110 @@
-# Token Types (Comprehensive Catalogue)
+# Token Typology (100 Variants)
 
-1. Utility Access Token
-2. Governance Voting Token
-3. Staking Derivative Token
-4. Liquidity Provider Token
-5. Stablecoin (Fiat-Collateralized)
-6. Algorithmic Stablecoin
-7. Commodity-Backed Token
-8. Central Bank Digital Currency Wrapper
-9. Cross-Chain Bridge Voucher
-10. Payment Token
-11. Reward Point Token
-12. Reputation Token
-13. Privacy Coin
-14. Identity Credential Token
-15. Compliance Whitelist Token
-16. Access Control NFT
-17. Real Estate Fractionalization Token
-18. Carbon Credit Token
-19. Renewable Energy Certificate Token
-20. Supply Chain Provenance Token
-21. Tokenized Invoice (Receivables)
-22. Tokenized Bond
-23. Tokenized Equity Share
-24. Revenue Share Token
-25. Royalty Right Token
-26. Streaming Payment Token
-27. Time-Bound Subscription Token
-28. Insurance Coverage Token
-29. Prediction Market Share Token
-30. Oracle Service Token
-31. Validator Performance Token
-32. Slashing Coverage Token
-33. Vesting Escrow Token
-34. Soulbound Identity Badge
-35. Decentralized Identifier Anchor Token
-36. Gaming Utility Token
-37. In-Game Asset NFT
-38. Esports Tournament Ticket Token
-39. Virtual Land Deed NFT
-40. Metaverse Avatar Skin Token
-41. DAO Membership Token
-42. Quadratic Funding Credit Token
-43. Public Goods Donation Receipt Token
-44. Impact Measurement Token
-45. Scientific Research Funding Token
-46. Intellectual Property License Token
-47. Data Access Token
-48. Zero-Knowledge Proof Access Token
-49. Confidential Computing Credit Token
-50. Compute Resource Token
-51. Storage Resource Token
-52. Bandwidth Allocation Token
-53. Edge Node Incentive Token
-54. Machine Learning Model Share Token
-55. IoT Device Identity Token
-56. Healthcare Data Consent Token
-57. Clinical Trial Participation Token
-58. Education Credential NFT
-59. Certification Badge Token
-60. Event Ticket Token
-61. VIP Access Token
-62. Content Creator Royalty Token
-63. Music Track NFT
-64. Film Distribution Token
-65. News Verification Token
-66. Charity Impact Token
-67. Microfinance Loan Token
-68. Community Currency Token
-69. Local Governance Vote Token
-70. Carbon Removal Credit Token
-71. Biodiversity Offset Token
-72. Disaster Relief Voucher Token
-73. Universal Basic Income Token
-74. Reputation-Weighted Voting Token
-75. Treasury Share Token
-76. Strategic Reserve Token
-77. Penalty Insurance Token
-78. Derivative Collateral Token
-79. Options Contract Token
-80. Futures Position Token
-81. Synthetic Asset Token
-82. Index Fund Token
-83. Basket-backed Stablecoin Token
-84. Wrapped External Asset Token
-85. Layer-2 Exit Voucher Token
-86. Cross-Chain Messaging Token
-87. Privacy-Preserving Governance Token
-88. Compliance Reporting Token
-89. Developer Bounty Token
-90. Bug Bounty Claim Token
-91. Testnet Faucet Token
-92. Beta Access Token
-93. Research Paper DOI Token
-94. Patent Disclosure Token
-95. Medical Prescription Token
-96. Secure Document Signature Token
-97. Voting Receipt Token
-98. Emergency Response Coordination Token
-99. Logistics Shipping Token
-100. Agricultural Yield Token
+## Overview
+The following taxonomy captures 100 token archetypes categorized by economic role, governance function, and technological implementation. Each entry lists primary utility and research considerations.
+
+1. Utility Access Token — API access credits; model rate-limiting fairness.
+2. Governance Vote Token — DAO voting power; study collusion resistance.
+3. Staking Token — Validator collateral; analyze slashing insurance markets.
+4. Liquidity Provider Token — AMM share; examine impermanent loss hedging.
+5. Stablecoin (Fiat-backed) — Payment rails; regulatory compliance focus.
+6. Stablecoin (Crypto-collateralized) — Algorithmic stability; risk control loops.
+7. Stablecoin (Commodity-backed) — Asset tokenization; custody logistics.
+8. Reward Point Token — Loyalty programs; expiration dynamics.
+9. Reputation Token — Sybil-resistant identity; privacy safeguards.
+10. Soulbound Credential Token — Non-transferable achievements; consent management.
+11. Carbon Credit Token — Environmental markets; auditability of offsets.
+12. Energy Future Token — Grid coordination; real-time settlement.
+13. Real Estate Share Token — Fractional property; legal wrappers.
+14. Music Royalty Token — Streaming revenue shares; rights management.
+15. Art Fraction Token — Art investment; provenance tracking.
+16. Insurance Risk Token — Parametric insurance payouts; oracle design.
+17. Prediction Market Token — Event hedging; anti-manipulation.
+18. Governance Council Token — Delegated veto rights; constitutional checks.
+19. Infrastructure Bond Token — Financing nodes; duration risk.
+20. Validator Reputation Token — Performance weighting; slash history embedding.
+21. Cross-chain Bridge Token — Collateralizing relayers; slashing triggers.
+22. Privacy Shield Token — zk-access rights; compliance interplay.
+23. Data Marketplace Token — Data purchase; differential privacy incentives.
+24. AI Compute Token — GPU/TPU rental; scheduling fairness.
+25. AI Model Token — Ownership of trained models; licensing.
+26. Storage Rental Token — Decentralized storage payments; retrieval guarantees.
+27. Bandwidth Token — Network QoS; congestion pricing.
+28. Identity Verification Token — KYC attestations; revocation flows.
+29. Reputation Score NFT — Non-fungible skill graph; sybil resistance.
+30. Game Asset Token — In-game items; interoperability.
+31. Game Currency Token — In-game medium; inflation control.
+32. Metaverse Land Token — Virtual real estate; zoning rules.
+33. Charity Impact Token — Donation tracking; transparency.
+34. Microloan Token — P2P lending; credit scoring.
+35. Yield Aggregator Token — Auto-compounding rights; risk-sharing.
+36. Work Token — Labor contributions; DAO payroll.
+37. Streaming Subscription Token — Continuous access rights; cancellations.
+38. Time-Bound Access Token — Event tickets; scalping mitigation.
+39. Educational Credential Token — Certifications; accreditation.
+40. Supply Chain Token — Traceability; IoT integration.
+41. Logistics Voucher Token — Freight booking; dynamic pricing.
+42. Mobility Token — Shared transport; carbon accounting.
+43. Healthcare Data Token — Consent-managed records; compliance.
+44. Clinical Trial Token — Participant incentives; ethics oversight.
+45. Pharmaceutical Trace Token — Drug provenance; anti-counterfeit.
+46. Agricultural Yield Token — Crop futures; weather oracles.
+47. Water Rights Token — Allocation trading; environmental regulation.
+48. Fisheries Quota Token — Sustainability enforcement.
+49. Mineral Extraction Token — Resource rights; ESG monitoring.
+50. Patent Token — IP licensing; royalty automation.
+51. Dividend Token — Profit sharing; tax compliance.
+52. Equity Token — Security tokenization; investor protection.
+53. Debt Note Token — Bond issuance; interest scheduling.
+54. Invoice Financing Token — Supply chain finance; credit risk.
+55. Factoring Token — Accounts receivable; default insurance.
+56. Donation Governance Token — Charity voting; accountability.
+57. UBI Token — Universal income distribution; fairness metrics.
+58. Quadratic Funding Token — Matching contributions; collusion detection.
+59. Public Goods Badge — Recognition of contributions; incentive alignment.
+60. Dev Bounty Token — Task completion; escrow enforcement.
+61. Bug Bounty Token — Security reporting; triage workflows.
+62. Compliance Token — Regulatory approvals; jurisdiction tags.
+63. CBDC Representation Token — Central bank liability; privacy policies.
+64. Tax Credit Token — Government incentives; audit trails.
+65. Voucher Token — Retail coupons; redemption analytics.
+66. NFT Index Token — Basket exposure; valuation methodologies.
+67. DAO Share Token — Cooperative ownership; exit mechanisms.
+68. Impact Investing Token — ESG metrics; verification.
+69. Climate Resilience Token — Funding adaptation projects; milestone tracking.
+70. Disaster Relief Token — Emergency coordination; transparency.
+71. Reputation Staking Token — Slashing for misinformation; arbitration.
+72. Node Uptime Token — SLA enforcement; monitoring integration.
+73. Data Oracle Token — Price feeds; accuracy slashing.
+74. Oracle Insurance Token — Risk pooling; actuarial modelling.
+75. Privacy Budget Token — Differential privacy consumption; auditing.
+76. Compliance Attestation NFT — Regulated service badges; expiration.
+77. KYC Delegation Token — Shareable compliance credentials; revocation.
+78. Derivatives Margin Token — Collateralization; liquidation engines.
+79. Synthetic Asset Token — Mirror assets; oracle dependency.
+80. Algorithmic Governance Token — Parameter tuning; objective functions.
+81. Voting Escrow Token — Lockup-based voting power; bribery resistance.
+82. Reputation-backed Stablecoin — Credit scoring; anti-collusion.
+83. Tokenized Index Fund — Portfolio rebalancing; NAV reporting.
+84. Tokenized ETF — Regulated wrapper; compliance gating.
+85. Wrapped Asset Token — Cross-chain representation; custodial risk.
+86. Bridge Liquidity Token — Incentivizing liquidity pools; impermanent loss.
+87. Cross-rollup Token — Inter-rollup compatibility; bridging latency.
+88. Credential Staking Token — Attestations with slashing; trust networks.
+89. Randomness Beacon Token — Providing entropy; cryptoeconomic security.
+90. Validator Insurance Token — Cover slashing; actuarial basis.
+91. Reputation for Auditors Token — Track audit outcomes; incentives.
+92. Metagovernance Token — Voting on other DAOs; meta-risk.
+93. Marketplace Listing Token — Access to curated markets; curation tax.
+94. Content Creator Token — Monetization rights; fan engagement.
+95. Streaming Royalty Token — Ongoing revenue; micropayments.
+96. Charity Impact NFT — Unique donation receipts; storytelling.
+97. Gene Data Token — Genomic sharing; consent and privacy.
+98. Edge Compute Token — IoT compute marketplace; latency SLAs.
+99. Research Funding Token — Grant management; milestone verification.
+100. Space Resource Token — Extraterrestrial assets; legal frameworks.
+
+## Research Priorities
+- Classification ontologies for interoperability.
+- Risk scoring methodologies blending on-chain and off-chain data.
+- Token lifecycle governance with compliance automation.

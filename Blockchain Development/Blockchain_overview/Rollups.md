@@ -1,31 +1,30 @@
-# Rollups Overview
+# Rollups Strategy (Doctoral Expansion)
 
-## Definition
-Rollups execute transactions off-chain while posting succinct proofs and data commitments on the base layer to inherit security.
+## 1. Taxonomy
+- **Optimistic rollups:** Fraud proofs with challenge windows (Arbitrum, Optimism).
+- **ZK-rollups:** Validity proofs (Groth16, Plonk, STARKs) ensuring immediate finality.
+- **Sovereign rollups:** Manage own execution environment while inheriting data availability from L1.
+- **Application-specific rollups:** Tailored constraints for gaming, payments, identity.
 
-## Types
-- **Optimistic Rollups**: Assume validity; challenge mechanism with fraud proofs (e.g., Arbitrum, Optimism).
-- **ZK-Rollups**: Publish zero-knowledge validity proofs (Groth16, PLONK, STARK) ensuring correctness without challenges.
-- **Sovereign Rollups**: Use base layer purely for data availability; consensus and settlement handled by rollup governance.
+## 2. Architecture Components
+1. **Sequencer layer:** Ordered batching, MEV neutralization, and cross-domain message routing.
+2. **Prover system:** High-performance proof generation pipeline with GPU/ASIC acceleration and distributed prover markets.
+3. **Bridge contracts:** Enforce verification logic, manage deposits/withdrawals, and expose governance hooks.
+4. **Data availability:** On-chain calldata, blob space (EIP-4844), or external DA committees with KZG commitments.
 
-## Design Considerations
-- Data availability strategy (on-chain calldata vs. external DA layers like Celestia).
-- Sequencer decentralization: single operator, rotating committee, or permissionless auction.
-- Bridging architecture: message passing, finality windows, exit proofs.
-- Upgradability: multi-signature vs. on-chain governance with timelocks.
+## 3. Design Considerations
+- **Security inheritance:** Formalize assumptions about L1 finality, censorship, and reorg handling.
+- **Interoperability:** Shared bridge standards, message relayers, and canonical token mapping.
+- **Economic model:** Fee allocation between L1, sequencers, and prover markets.
+- **User experience:** Fast exits, bridging UX, and transparent status dashboards.
 
-## Performance Metrics
-- Transactions per second off-chain vs. posting frequency.
-- Proof generation latency and cost.
-- Capital efficiency of bridges (liquidity providers, exit delays).
+## 4. Operational Playbooks
+- Sequencer decentralization roadmap: multi-operator, fault-tolerant consensus, fallback to L1 rollup contract.
+- Proof generation SLAs with penalized delays and redundant prover networks.
+- Incident response for invalid state roots, leveraging optimistic fraud proofs or emergency shutdown.
 
-## Risk Management
-- Sequencer misbehavior and censorship resistance.
-- Fraud proof window design to prevent griefing.
-- Circuit complexity for ZK proofs and trusted setup requirements.
-- Dependency on L1 congestion and gas pricing.
-
-## Roadmap
-- Explore shared sequencer networks for interoperability.
-- Implement cross-rollup composability via atomic swaps and message relayers.
-- Integrate MEV mitigation (PBS, encrypted mempools) within rollup architecture.
+## 5. Research Directions
+- Recursive proof composition for mass batching.
+- Shared sequencing/ordering between multiple rollups (SUAVE, Espresso).
+- Integration with privacy-preserving rollups (Aztec-style encrypted state).
+- Tokenomic models for incentivizing data availability committees.

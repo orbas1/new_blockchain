@@ -1,22 +1,24 @@
-# State Channels
+# State Channels Strategy
 
-## Overview
-- Off-chain interaction model where participants lock funds on-chain and exchange signed state updates.
-- Only open and close transactions touch the base layer, enabling instant settlement.
+## 1. Concept
+State channels move frequent interactions off-chain, settling only netted results on the base layer. Ideal for micro-payments, gaming, and latency-sensitive coordination.
 
-## Lifecycle
-1. Channel establishment with multisignature smart contract.
-2. Off-chain negotiation of state transitions, co-signed by participants.
-3. Dispute resolution via on-chain adjudicator enforcing latest valid state.
-4. Channel closure and fund redistribution.
+## 2. Lifecycle
+1. **Channel opening:** On-chain deposit contract locks collateral and defines dispute rules.
+2. **Off-chain updates:** Parties exchange signed state updates with monotonically increasing version numbers.
+3. **Dispute resolution:** Any party can submit latest signed state to L1; timers enforce liveness.
+4. **Settlement:** Funds redistributed per final state; optional channel reuse via virtual channels or routing networks.
 
-## Variants
-- Payment channels (Lightning Network).
-- Generalized state channels supporting arbitrary smart contract logic (Counterfactual, Perun).
-- Virtual channels enabling multi-hop connectivity without on-chain collateral.
+## 3. Design Considerations
+- **Routing:** Multi-hop payment routing (Lightning, Raiden) requiring pathfinding algorithms and liquidity management.
+- **Security:** Watchtowers to monitor chain for malicious closures; penalty transactions to deter misbehavior.
+- **Privacy:** Onion routing and zero-knowledge payment proofs to conceal balances and routes.
 
-## Design Considerations
-- Watchtower services to monitor for fraud attempts.
-- Liquidity management and rebalancing strategies.
-- Privacy enhancements (PTLCs, adaptor signatures).
-- Regulatory compliance for custodial routing nodes.
+## 4. Metrics & Monitoring
+- Channel uptime, dispute frequency, routing success rate, liquidity utilization.
+- Economic incentives for routing nodes and watchtower operators.
+
+## 5. Research Directions
+- Generalized state channels supporting arbitrary smart contract logic.
+- Interoperable channel networks bridging different chains.
+- Automatic liquidity rebalancing using batch auctions or streaming swaps.

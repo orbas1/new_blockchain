@@ -1,22 +1,19 @@
-# Plasma Framework
+# Plasma Architecture
 
-## Concept
-- Hierarchical chain structure where child chains commit Merkle roots to root chain.
+## 1. Concept
+Plasma chains offload transactions to child chains secured by periodic commitments to the root chain.
 
-## Mechanics
-- Operators aggregate transactions, submit commitments, and provide fraud proofs when challenged.
-- Users exit by presenting inclusion proofs and waiting through challenge period.
+## 2. Components
+- **Operator:** Aggregates transactions, produces Plasma blocks, submits commitments.
+- **Exit mechanism:** Enables users to withdraw funds with fraud proofs and challenge periods.
+- **Fraud proofs:** Verify invalid exits or double-spends using Merkle proofs.
 
-## Variants
-- Plasma Cash for non-fungible coins.
-- Plasma Debit enabling shared slots and micropayments.
-- Plasma Prime integrating zero-knowledge proofs.
+## 3. Security Considerations
+- Mass exit scenarios and exit throttling.
+- Data availability challenges and operator censorship.
+- Watchtower services monitoring commitments and initiating challenges.
 
-## Limitations
-- Data availability reliance on operators.
-- Complex exit games leading to UX friction.
-- Incompatible with general smart contract execution without extensions.
-
-## Future Work
-- Combine with rollup data availability to reduce exit complexity.
-- Improve mass exit handling via liquidity providers and insurance pools.
+## 4. Research Agenda
+- Plasma with validity proofs to reduce exit latency.
+- Hybrid Plasma-rollup architectures.
+- User experience improvements for exit management.

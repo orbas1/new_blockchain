@@ -1,20 +1,24 @@
 # Native Coin Economics
 
-## Roles
-- Primary medium for transaction fees, staking collateral, governance voting, and incentive alignment.
-- Collateral for decentralized finance primitives and cross-chain bridges.
+## 1. Role
+- Medium of exchange for fees, staking collateral, governance, and ecosystem incentives.
+- Reserve asset for DeFi primitives and cross-chain collateralization.
 
-## Monetary Policy Options
-- Fixed supply with disinflationary issuance curve.
-- Tail emission to sustain security budget and ecosystem funding.
-- Algorithmic adjustments tied to network usage (fee burn + variable issuance).
+## 2. Monetary Policy Options
+- **Fixed supply:** Predictable scarcity but limited monetary flexibility.
+- **Tail emission:** Sustains validator rewards and security budgets.
+- **Algorithmic adjustments:** Dynamic inflation tied to security spending or economic throughput.
 
-## Distribution Mechanisms
-- Genesis allocations for founders, investors, community treasury.
-- Mining/staking rewards with vesting and lockups.
-- Ecosystem grants, liquidity mining, retroactive public goods funding.
+## 3. Distribution Mechanics
+- Genesis allocations (founders, community, investors) with vesting schedules and clawback clauses.
+- On-chain auctions for validator slots or parachain leases.
+- Continuous emission allocated to validators, developers, and public goods funds.
 
-## Risk Management
-- Treasury diversification strategies (stablecoins, BTC, ETH reserves).
-- Inflation control via governance oversight and transparent reporting.
-- Legal compliance for token classification (commodity vs. security analysis).
+## 4. Treasury & Governance
+- Treasury controlled via quadratic funding, retroactive grants, and milestone-based disbursements.
+- Macroprudential levers: staking rate adjustments, fee burn vs redistribution.
+
+## 5. Risk Management
+- Liquidity support (market makers, AMMs).
+- Collateralization parameters for lending protocols.
+- Monitoring price manipulation, oracle reliability, and derivatives exposure.

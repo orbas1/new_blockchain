@@ -1,20 +1,25 @@
-# Explorer GUI Requirements
+# Explorer GUI Requirements (Doctoral Expansion)
 
-## Objectives
-- Provide transparent access to blockchain data for end-users, developers, auditors.
-- Offer advanced analytics and compliance-friendly tooling.
+## 1. Vision
+Provide a forensic-grade analytics console enabling stakeholders to audit consensus health, economic activity, and smart contract behavior with sub-second responsiveness.
 
-## Key Features
-- Real-time block and transaction feed with filtering (address, token, contract).
-- Visualizations for gas usage, validator performance, network latency.
-- Integration of rollup and sidechain data, bridging events.
-- Address tagging with compliance flags and risk scoring.
+## 2. Core Modules
+- **Block timeline:** Real-time visualization with finality annotations, fork indicators, and MEV events.
+- **Transaction inspector:** Decode calldata, trace execution, display gas attribution and event logs.
+- **Validator dashboard:** Performance metrics, slashing history, geographical dispersion.
+- **Economics panel:** Supply charts, inflation rates, fee burn, staking ratios.
 
-## UX Considerations
-- Responsive design for desktop/mobile.
-- Accessibility (ARIA labels, color contrast) and localization.
-- Export capabilities (CSV, JSON, APIs) for research teams.
+## 3. UX Principles
+- Role-based customization for regulators, developers, and retail users.
+- Exportable datasets (CSV, parquet) with API integration for programmatic access.
+- Accessibility compliance (WCAG 2.1), localization, and responsive design.
 
-## Security
-- Rate limiting and API keys for data endpoints.
-- Tamper-proof data via backend validation and digital signatures on downloadable reports.
+## 4. Advanced Features
+- On-chain governance visualizations (proposal lifecycle, vote distribution).
+- Alerting system hooking into webhooks, Slack, or PagerDuty.
+- Integration with zero-knowledge proof verifiers for privacy-preserving analytics.
+
+## 5. Implementation Notes
+- Backend indexing via scalable data warehouses (ClickHouse, BigQuery).
+- Caching strategies (GraphQL federation, CDN) for global performance.
+- Security hardening: CSP headers, content sanitization, and audit logging.

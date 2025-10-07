@@ -1,20 +1,23 @@
 # Cross-Chain Interoperability
 
-## Goals
-- Facilitate asset transfers, messaging, and shared security across heterogeneous chains.
+## 1. Objectives
+Enable asset and data mobility across heterogeneous chains with verifiable trust assumptions and automated risk management.
 
-## Approaches
-- **Light Client Bridges**: Verify counterpart chain headers (IBC, Rainbow bridge).
-- **Liquidity Networks**: Use bonded market makers for instant swaps.
-- **Relayer Networks**: Decentralized relayers submit proofs with slashing-backed security.
-- **Shared Sequencers**: Coordinate rollups for atomic composability.
+## 2. Components
+- **Messaging protocols:** IBC, LayerZero, Axelar — deliver verifiable packets.
+- **Bridges:** Lock-and-mint, burn-and-mint, liquidity networks.
+- **Relayers:** Off-chain agents submitting proofs, incentivized via fees and slashing bonds.
 
-## Security Considerations
-- Multi-signature vs. threshold cryptography for bridge control.
-- Replay protection, message nonce management.
-- Monitoring for chain reorgs and pausing mechanisms.
+## 3. Security Considerations
+- Formal threat modelling (bridge hacks, replay attacks, relayer collusion).
+- Cross-chain rate limits, timeouts, and telemetry for anomaly detection.
+- Insurance mechanisms (slashing, collateral, mutualized funds).
 
-## Roadmap
-- Standardize cross-chain messaging formats (XCM, GMP).
-- Develop interoperability testing suite for integration partners.
-- Explore cross-chain MEV mitigation and fair ordering protocols.
+## 4. UX & Developer Experience
+- Unified APIs and SDKs for bridging and cross-chain contract calls.
+- Transaction status tracking, user notifications, and fallback instructions.
+
+## 5. Research Agenda
+- ZK-based general message passing.
+- Cross-chain MEV mitigation and fair ordering.
+- Interoperability with off-chain systems (banking rails, CBDCs).

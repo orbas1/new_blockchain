@@ -1,20 +1,25 @@
-# Governance Portal GUI
+# Governance Portal GUI Specification
 
-## Objectives
-- Facilitate proposal creation, deliberation, and voting in an accessible interface.
+## 1. Objectives
+Provide a transparent, auditable interface for proposing, deliberating, and executing governance actions.
 
-## Core Modules
-- Proposal dashboard with status filters and analytics.
-- Voting interface with delegation management and rationale submission.
-- Discussion forum integration (threads, rich media, moderation tools).
-- Treasury overview showing allocations, spending, and forecasts.
+## 2. Core Views
+- **Proposal workspace:** Drafting tools, template library, legal review checklist.
+- **Deliberation forum:** Threaded discussions, sentiment analysis, delegate statements.
+- **Voting dashboard:** Real-time vote tally, quorum progress, delegate performance analytics.
+- **Execution tracker:** Timelock queues, on-chain transaction status, incident reports.
 
-## UX & Accessibility
-- Support for large token holder workflows and mobile usage.
-- Transparent display of voter power, quorum progress, and deadlines.
-- Localization and accessibility compliance.
+## 3. UX & Accessibility
+- Role-based dashboards for proposers, delegates, observers.
+- Accessibility compliance, multilingual support, screen-reader optimized layouts.
+- Mobile-responsive design for delegate participation on the go.
 
-## Security
-- Signing integration (wallets, hardware devices).
-- Anti-spam mechanisms for proposal submissions.
-- Audit trail for off-chain discussions linked to on-chain actions.
+## 4. Security & Compliance
+- Hardware wallet signing, MPC approval workflows, and granular permissioning.
+- Audit logs exportable for regulators and third-party auditors.
+- Integration with identity verification for compliance-sensitive proposals.
+
+## 5. Research Agenda
+- Governance simulations embedded for scenario planning.
+- AI-assisted summarization of debates and proposal impacts.
+- Interoperability with cross-DAO governance protocols.

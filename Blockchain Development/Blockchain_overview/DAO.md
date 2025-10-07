@@ -1,20 +1,24 @@
-# Decentralized Autonomous Organization (DAO)
+# Decentralized Autonomous Organization (DAO) Blueprint
 
-## Mandate
-- Coordinate community decision-making, treasury management, and strategic initiatives.
+## 1. Mission
+Codify community-driven decision-making with transparent rules and programmable accountability.
 
-## Structure
-- Multi-tier governance: general members, delegates, specialized working groups.
-- Legal wrapper (foundation, cooperative, LLC) for real-world contracts.
-- Operational charters defining scopes, budgets, KPIs for guilds.
+## 2. Governance Mechanics
+- Token-weighted votes, reputation systems, and delegate councils.
+- Proposal categories (core protocol, treasury, constitutional).
+- Dispute resolution via arbitration panels and on-chain juries.
 
-## Tools & Processes
-- Proposal templates standardizing rationale, budget, milestones.
-- On-chain voting with delegated proof-of-stake weighting.
-- Off-chain discussion via forums, Discord, research calls.
-- Treasury management with multi-sig or MPC custody and transparency dashboards.
+## 3. Operational Functions
+- Treasury management with diversified assets and risk policies.
+- Working groups for engineering, growth, legal, and ecosystem.
+- Compensation frameworks (salaries, bounties, retroactive rewards).
 
-## Accountability
-- Quarterly reporting, audits of treasury and funded projects.
-- Retroactive evaluation to adjust delegate compensation.
-- Conflict resolution mechanisms (mediation, arbitration panels).
+## 4. Compliance & Legal
+- Jurisdictional wrappers (foundations, cooperatives).
+- KYC/AML for contributors when required.
+- Liability shielding, tax reporting, and transparency.
+
+## 5. Research Agenda
+- DAO2DAO collaborations and shared service agreements.
+- Algorithmic governance assistance using simulation and AI.
+- Long-term incentive alignment and contributor retention.

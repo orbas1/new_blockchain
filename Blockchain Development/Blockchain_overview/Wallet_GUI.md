@@ -1,28 +1,22 @@
-# Wallet GUI Specification
+# Wallet GUI Blueprint
 
-## User Journeys
-- Onboarding: mnemonic/seedless setup, hardware wallet connection.
-- Asset management: balance overview, token sorting, NFT gallery.
-- Transaction flows: send, receive, swap, stake, delegate.
-- Governance: proposal browsing, voting, delegation management.
+## 1. Personas
+- Retail users, professional traders, DAO delegates, institutional custodians.
 
-## Interface Components
-- Dashboard with customizable widgets.
-- Activity timeline with transaction simulation preview.
-- Gas/fee controls with presets (economy, market, priority) and advanced gas sliders.
-- Security center: device status, session approvals, phishing alerts.
+## 2. Interface Principles
+- Context-aware onboarding with risk disclosures and tutorials.
+- Transaction preview screens with explainable fee breakdown and security scoring.
+- Integrated dApp browser with permission scopes and session revocation.
 
-## Accessibility & Localization
-- Multi-language support, RTL layout.
-- Screen reader compatibility and keyboard navigation.
-- High-contrast themes, configurable font sizes.
+## 3. Advanced Capabilities
+- Multi-account dashboard with cross-chain balances and DeFi positions.
+- Compliance mode enabling travel rule data packaging and KYC attestations.
+- Hardware wallet pairing, biometric unlock, and secure messaging channel.
 
-## Compliance Hooks
-- Optional KYC module integration.
-- Travel rule data prompts for large transfers.
-- Audit log exports for institutional users.
+## 4. Accessibility & Localization
+- Keyboard navigation, screen reader support, high-contrast themes.
+- 24+ language packs and regionalized fiat conversions.
 
-## Technology Stack
-- Cross-platform framework (React Native/Electron) with secure storage abstraction.
-- Hardware wallet SDK integration (Ledger, Trezor, Keystone).
-- Analytics instrumentation with privacy-respecting telemetry.
+## 5. Observability
+- Crash analytics with privacy-by-design.
+- Feature usage telemetry feeding product roadmap prioritization.

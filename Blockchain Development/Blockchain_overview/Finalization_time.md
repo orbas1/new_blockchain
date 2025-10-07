@@ -1,21 +1,26 @@
 # Finalization Time Analysis
 
-## Target KPIs
-- Mean time to finality (MTF) under normal conditions: ≤ 12 seconds.
-- Tail latency (p95, p99) tracked for stress scenarios.
+## 1. Determinants
+- Network latency, validator responsiveness, consensus timeouts.
+- Transaction complexity affecting execution and block packing.
+- Committee size and signature aggregation overhead.
 
-## Influencing Factors
-- Network latency and gossip efficiency.
-- Validator participation rate and timeout configuration.
-- Block size and execution time.
-- Fork-choice rules and view synchronization.
+## 2. Measurement Methodology
+- Instrument nodes to record proposal-to-finality timestamps.
+- Use synthetic workloads to stress network and identify bottlenecks.
+- Publish historical time series for ecosystem stakeholders.
 
-## Measurement Strategy
-- Instrument nodes to log propose, pre-vote, pre-commit timestamps.
-- Correlate with telemetry dashboards (Prometheus/Grafana).
-- Simulate adversarial scenarios (network partitions, offline validators) in testnet.
+## 3. Optimization Levers
+- Adaptive timeout tuning using control theory.
+- Prioritized gossip for votes and commitments.
+- Pre-confirmations via optimistic sequencing for UX, with risk disclosure.
 
-## Optimization Roadmap
-- Adaptive timeouts responsive to observed network delay.
-- Aggregated BLS signatures to reduce message size.
-- Employ pipelined consensus (HotStuff) to overlap rounds.
+## 4. Benchmark Targets
+- Retail UX: <3 seconds for optimistic confirmation, <15 seconds deterministic.
+- Institutional settlement: <60 seconds for high-value transfers.
+- Cross-chain operations: Align with bridge SLAs and challenge periods.
+
+## 5. Research Directions
+- Probabilistic models for finality under partial synchrony.
+- Multi-chain coordination for synchronized finality windows.
+- Integration with carbon/energy-aware scheduling.

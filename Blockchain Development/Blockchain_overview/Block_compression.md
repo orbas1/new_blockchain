@@ -1,28 +1,32 @@
-# Block Compression Strategies
+# Block Compression & Storage Optimization
 
-## Objectives
-- Reduce storage footprint without compromising verifiability.
-- Improve synchronization times for new nodes and archival systems.
+## 1. Motivation
+Blockchains generate terabytes of data annually; compression reduces storage burden, sync times, and bandwidth usage while preserving verifiability.
 
-## Techniques
-- **Transaction Deduplication**: Remove redundant witness data (SegWit-style separation).
-- **Canonical Encoding**: Use protobuf/SSZ with field order standardization and varint encoding.
-- **State Delta Compression**: Store differences relative to previous state roots.
-- **Zero-Knowledge Succinct Proofs**: Replace raw transaction data with validity proofs for rollup batches.
-- **Erasure Coding**: Disperse data across shards with Reed-Solomon or LDPC codes to enhance availability.
+## 2. Compression Layers
+- **Transaction-level:** Delta-encoding of account balances, signature aggregation (BLS, Schnorr) to compress witness data.
+- **Block-level:** Use of succinct commitment schemes, calldata de-duplication, and content-defined chunking before erasure coding.
+- **State snapshots:** Periodic compressed state exports using Verkle tries with polynomial commitments.
 
-## Pipeline
-1. Validate block using full data.
-2. Generate compressed artifact (e.g., Brotli, Zstandard, bespoke domain compression).
-3. Publish commitments to ensure reconstructability.
-4. Provide decompression libraries to explorers and analytics platforms.
+## 3. Techniques
+| Technique | Description | Impact | Considerations |
+|---|---|---|---|
+| Zstandard / LZ4 | Fast, lossless compression for gossip payloads | Reduced bandwidth | CPU overhead, needs deterministic configuration |
+| Binary canonical encoding | Remove redundant JSON/RLP wrappers | Smaller blocks | Requires consensus on encoding standard |
+| Sparse Merkle pruning | Drop stale branches with cryptographic proofs | Lower disk | Maintain witnesses for historical queries |
+| zk-SNARK rollups | Offload execution, post succinct proof | Massive compression | Trusted setup, prover resources |
 
-## Metrics
-- Compression ratio (%) per block type.
-- CPU overhead vs. storage savings.
-- Latency impact on block propagation.
+## 4. Implementation Guidance
+- Maintain deterministic compression outputs to avoid consensus divergence.
+- Version compression codecs to enable safe upgrades and backward compatibility.
+- Provide fallbacks for light clients (pre-compressed snapshots, chunk streaming).
 
-## Roadmap
-- Research adaptive compression using machine learning for transaction patterns.
-- Evaluate hardware acceleration (FPGA/GPU) for decompression on high-throughput nodes.
-- Align with regulatory requirements on data retention and evidentiary standards.
+## 5. Tooling
+- Compression-aware block explorers that display raw vs effective data size.
+- Storage simulators projecting growth under varied workloads.
+- Benchmarks with synthetic workloads capturing contract-heavy, NFT, and DeFi scenarios.
+
+## 6. Research Agenda
+- Hardware-accelerated proof generation (GPUs, FPGAs) for rollup compression.
+- Content-addressable storage protocols with verifiable deduplication.
+- Probabilistic data structures (Bloom filters, Cuckoo filters) for state availability proofs.

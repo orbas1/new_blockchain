@@ -1,20 +1,22 @@
-Cryptography Stack
-==================
+# Cryptographic Foundations
 
-Key Areas
----------
-- Public-key signatures (ECDSA, EdDSA, BLS) for transaction authentication and consensus votes.
-- Zero-knowledge proofs for privacy and scalability (Groth16, PLONK, STARKs).
-- Threshold cryptography for distributed key generation and signing (DKG, TSS).
-- Secure randomness via verifiable random functions and distributed randomness beacons.
+## 1. Primitives
+- Digital signatures (Ed25519, BLS12-381, post-quantum candidates).
+- Hash functions (SHA-3, BLAKE3, Poseidon).
+- Key agreement (X25519, ECDH over secp256k1).
+- Zero-knowledge proofs (SNARKs, STARKs, Bulletproofs).
 
-Security Practices
-------------------
-- Formal verification of cryptographic libraries.
-- Audit trails for key ceremonies and trusted setups.
-- Upgradability plan for post-quantum primitives (Dilithium, Falcon, Picnic).
+## 2. System Integration
+- Signature aggregation for consensus scalability.
+- Threshold cryptography for MPC custody and DAO key management.
+- Commitment schemes for confidentiality (Pedersen, ElGamal).
 
-Compliance Considerations
--------------------------
-- Export control adherence for cryptographic algorithms.
-- Documentation for regulators regarding encryption usage and key recovery policies.
+## 3. Security Engineering
+- Formal verification of cryptographic implementations (Fiat-Crypto, HACL*).
+- Constant-time, side-channel resistant coding standards.
+- Hardware root of trust (TEE attestation, TPM integration).
+
+## 4. Research Frontier
+- Post-quantum transition roadmap (lattice-based signatures, hash-based accumulators).
+- Succinct proofs for machine learning models embedded in smart contracts.
+- Cryptographic accountability via privacy-preserving audit trails.

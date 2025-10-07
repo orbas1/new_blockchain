@@ -1,25 +1,18 @@
 # Python Library Ecosystem
 
-## Node Interaction
-- `web3.py` for JSON-RPC communication and contract bindings.
-- `py-substrate-interface` for Substrate-based chains.
-- `cosmpy` for Cosmos SDK networks.
+## 1. Core Libraries
+- Web3.py, eth-abi, py-substrate-interface, solcx, brownie, anchorpy.
 
-## Cryptography & Encoding
-- `pycryptodome` for symmetric/asymmetric primitives.
-- `eth-keys`, `nacl`, `blspy` for signature schemes.
-- `pymerkletools`, `merkly` for Merkle tree operations.
+## 2. Data & Analytics
+- Pandas, Dask, NetworkX, Prophet, NumPy/SciPy for on-chain analysis.
 
-## Data & Analytics
-- `pandas` for data analysis.
-- `networkx` for graph analysis of peer topology.
-- `matplotlib`, `plotly` for visualization dashboards.
+## 3. Cryptography
+- PyNaCl, cryptography, blspy, py_ecc, pycryptodome.
 
-## Testing & Simulation
-- `pytest` with `hypothesis` for property-based testing.
-- `brownie`, `apeworx`, `foundry` Python bindings for smart contract testing.
-- `simpy` for discrete-event network simulations.
+## 4. Testing & Tooling
+- Hypothesis for property-based testing, pytest, apeworx, foundry bindings.
 
-## DevOps
-- `fabric`, `invoke` for deployment scripts.
-- `ansible` modules for infrastructure automation.
+## 5. Research Agenda
+- Formal methods bindings (PySMT, Z3).
+- Machine learning for anomaly detection (PyTorch, TensorFlow).
+- Automated report generation for compliance.

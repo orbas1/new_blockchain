@@ -1,21 +1,17 @@
 # Network Architecture
 
-## Layers
-- P2P gossip layer for block and transaction propagation.
-- RPC/API layer for external client access.
-- Monitoring and telemetry layer for observability.
+## 1. Layers
+- Transport (QUIC), session (Noise), routing (libp2p), application (gossip, RPC).
 
-## Protocols
-- LibP2P-based stack with multiplexing (mplex/quic) and encryption (Noise).
-- GossipSub for efficient message dissemination.
-- Content-addressed retrieval for historical data via Bitswap/IPFS.
+## 2. Performance Goals
+- Latency targets, throughput, resilience to churn.
 
-## Performance Targets
-- Propagation time < 2 seconds for 95% of nodes.
-- Bandwidth optimization via compression and differential sync.
-- Resilience against DDoS using rate limiting and peer scoring.
+## 3. Security
+- DDoS mitigation, eclipse attack prevention, anomaly detection.
 
-## Operations
-- Network upgrade procedures with version handshakes.
-- Canary networks for testing new protocol versions.
-- Incident response playbooks for outages and attacks.
+## 4. Monitoring
+- Network telemetry, packet capture, intrusion detection.
+
+## 5. Research Agenda
+- Satellite and 5G integration.
+- Adaptive network slicing for QoS.

@@ -1,24 +1,26 @@
-# Sidechains
+# Sidechains & Interoperable Parachains
 
-## Purpose
-- Extend functionality and throughput by running independent chains pegged to the main network.
-- Enable domain-specific optimization (privacy, compliance zones, specialized VM).
+## 1. Purpose
+Sidechains provide specialized execution environments tethered to a root chain via trust-minimized bridges. They enable scalability, jurisdictional compliance, and domain-specific optimizations without overloading the base layer.
 
-## Peg Mechanisms
-- **Two-Way Peg**: Lock assets on main chain, mint representation on sidechain via federated or smart contract bridges.
-- **Liquidity Providers**: Fast exits via bonded intermediaries.
-- **Native Interop Protocols**: IBC-style light client verification across chains.
+## 2. Security Models
+- **Federated bridges:** Multi-signature custodians, suitable for consortium deployments but with explicit trust assumptions.
+- **Light-client bridges:** Verify consensus proofs (SPV, BEEFY) to minimize trust.
+- **Optimistic bridges:** Rely on fraud proofs and challenge periods.
+- **ZK bridges:** Succinctly prove consensus transitions via SNARK/STARK technology.
 
-## Security Models
-- Federated signers (Liquid), proof-of-authority validators, or independent proof-of-stake sets.
-- Economic guarantees vary; require monitoring of collateralization and signer honesty.
+## 3. Architecture Stack
+1. **Consensus layer:** Could mirror L1 or adopt tuned mechanisms (e.g., fast BFT).
+2. **Execution environment:** Tailored VM (EVM, WASM, UTXO) with domain-specific precompiles.
+3. **Communication:** Channels for cross-chain messaging, asset transfers, and shared security signals.
+4. **Governance:** Delegated authorities to adjust fees, validator sets, and compliance parameters.
 
-## Operational Considerations
-- Finality synchronization and withdrawal periods.
-- Cross-chain slashing for validator misconduct.
-- Upgrade pathways and fallback to main chain in event of catastrophic failure.
+## 4. Risk Controls
+- Continuous monitoring of bridge collateral, validator performance, and message delays.
+- Mandatory withdrawal caps and circuit breakers.
+- Incident drills covering bridge key compromise, message replay, and partial chain halts.
 
-## Use Cases
-- Compliance chains with KYC gating.
-- High-frequency trading sidechains with deterministic finality.
-- Confidential transaction zones using zero-knowledge proofs.
+## 5. Research Agenda
+- Shared security frameworks (Polkadot parachains, Cosmos Interchain Security).
+- Zero-knowledge light clients for resource-constrained devices.
+- Legal interoperability agreements for cross-jurisdiction operation.

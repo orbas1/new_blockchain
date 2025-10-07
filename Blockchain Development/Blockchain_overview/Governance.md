@@ -1,21 +1,29 @@
-# Governance Framework
+# Governance Framework (Doctoral Expansion)
 
-## Principles
-- Transparency, accountability, inclusivity across stakeholders.
-- Balance on-chain decision-making with off-chain advisory councils.
+## 1. Objectives
+Balance decentralization, agility, and accountability while complying with global regulations.
 
-## Governance Bodies
-- Token holder assembly with delegated voting.
-- Technical council for protocol upgrades.
-- Compliance committee overseeing regulatory alignment.
-- Community treasury board managing grants and ecosystem growth.
+## 2. Structure
+- Bicameral system: token-weighted house and reputation-based council.
+- Constitutional charter with amendment process and judicial committee.
+- Emergency powers with time-bound scope and audit trail.
 
-## Processes
-- Proposal lifecycle: draft → community review → temperature check → formal vote → implementation.
-- Quorum and supermajority thresholds vary by proposal type (parameter tweak vs. hard fork).
-- Emergency powers with sunset clauses for incident response.
+## 3. Processes
+- Proposal lifecycle (draft, review, voting, execution, retrospective).
+- Delegation markets with transparency and revocation rights.
+- Quadratic or conviction voting for budget allocations.
 
-## Tooling
-- Governance portal with discussion forums, snapshot voting, quadratic voting options.
-- Identity systems for sybil resistance (proof-of-personhood, credential gating).
-- Analytics for voter participation, delegation network health, proposal impact.
+## 4. Tooling & Infrastructure
+- Governance portal, snapshot voting, on-chain execution queues.
+- Treasury management with multisig/MPC and programmatic disbursements.
+- Analytics for voter participation, proposal success rate, alignment.
+
+## 5. Risk Management
+- Mitigate voter apathy, plutocracy, and governance capture.
+- Build crisis management protocols (fork coordination, legal response).
+- Integrate compliance monitoring (sanctions screening, reporting).
+
+## 6. Research Agenda
+- Constitutional AI agents to assist policy drafting.
+- Cross-DAO interoperability and meta-governance.
+- Simulation-based governance stress testing.

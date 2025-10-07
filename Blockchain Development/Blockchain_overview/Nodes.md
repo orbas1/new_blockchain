@@ -1,18 +1,17 @@
-# Node Roles
+# Node Topology
 
-## Types
-- **Full Nodes**: Validate blocks, maintain full state, serve RPC endpoints.
-- **Validator Nodes**: Participate in consensus, produce blocks, sign votes.
-- **Archive Nodes**: Retain entire history for analytics and compliance.
-- **Light Clients**: Verify proofs using minimal resources.
-- **Observer Nodes**: Monitor network for MEV, security anomalies.
+## 1. Node Types
+- Full nodes, archival nodes, light clients, validator nodes, witness nodes.
 
-## Operational Requirements
-- Hardware specs by role (CPU, RAM, storage, bandwidth).
-- Security hardening: firewalls, key management, intrusion detection.
-- Monitoring: metrics collection, log aggregation, alerting.
+## 2. Infrastructure
+- Hardware profiles, virtualization, containerization, bare-metal setups.
+- Geo-distribution strategies for resilience.
 
-## Deployment Models
-- On-premise data centers, cloud infrastructure, hybrid setups.
-- Kubernetes orchestration for scaling RPC services.
-- Geo-distribution to minimize latency and regulatory concentration.
+## 3. Operations
+- Monitoring (Prometheus, Grafana), log aggregation, auto-recovery.
+- Security (firewalls, DDoS mitigation, HSM integration).
+
+## 4. Research Agenda
+- Decentralized node marketplaces.
+- Energy-aware scheduling and renewable integration.
+- Automated compliance reporting for regulated nodes.

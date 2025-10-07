@@ -1,20 +1,17 @@
-# API Strategy
+# Core API Surface
 
-## Objectives
-- Provide secure, scalable interfaces for wallets, explorers, dApps, and analytics platforms.
+## 1. Node RPC
+- JSON-RPC / gRPC endpoints for state queries, transaction submission, event subscription.
 
-## API Types
-- JSON-RPC for low-level node interactions.
-- REST/GraphQL endpoints for aggregated data.
-- WebSocket streams for real-time events.
-- gRPC interfaces for high-performance internal services.
+## 2. Data Services
+- GraphQL, REST analytics, websocket streaming.
 
-## Security & Governance
-- API key management, rate limiting, and quotas.
-- Role-based access control for privileged endpoints.
-- Audit logging and anomaly detection.
+## 3. Authentication
+- API keys, OAuth2 for enterprise clients, rate limiting, quota management.
 
-## Documentation & Developer Experience
-- Auto-generated OpenAPI/GraphQL schemas.
-- SDKs in major languages (TypeScript, Python, Rust).
-- Sandbox/testnet environments with sample data.
+## 4. Versioning & Governance
+- Semantic versioning, deprecation policies, change advisory board.
+
+## 5. Research Agenda
+- Standardizing cross-chain API schemas.
+- Zero-trust API gateways with continuous verification.

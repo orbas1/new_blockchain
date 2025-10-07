@@ -1,20 +1,26 @@
-# Virtual Machine Overview
+# Virtual Machine Strategy (Doctoral Expansion)
 
-## Execution Model
-- Deterministic state transitions with gas metering for resource accounting.
-- Support for both low-level bytecode and high-level language compilers.
+## 1. Design Goals
+- Deterministic execution across heterogeneous hardware.
+- Safety through memory isolation, resource metering, and formal verification.
+- Developer ergonomics with rich tooling and language support.
 
-## Features
-- Modular opcode set with versioning for backward compatibility.
-- Precompiles for cryptographic operations (hashing, signature verification, pairings).
-- Access to system contracts for staking, governance, and cross-chain messaging.
+## 2. Architecture
+- WASM core with capability-based security model.
+- Gas metering tied to CPU, memory, and I/O.
+- Precompiles for cryptography, big integers, zk-proof verification.
 
-## Performance Enhancements
-- JIT/AOT compilation for popular contracts.
-- Parallel execution using dependency graphs and optimistic concurrency control.
-- Deterministic sandboxing with WASM runtime support.
+## 3. Execution Pipeline
+- Bytecode validation, instrumentation for gas accounting.
+- JIT/AOT compilation with deterministic outputs.
+- Parallel execution scheduler using access lists and conflict detection.
 
-## Security Controls
-- Formal verification frameworks (K, Coq, Move Prover).
-- Gas schedule audits to prevent DoS vectors.
-- Resource limits per transaction and per block.
+## 4. Toolchain
+- Compilers (Rust, AssemblyScript, Go), debugging (GDB integration, tracers).
+- Formal verification frameworks (K-framework, Move Prover).
+- Testing harnesses: property-based fuzzing, concolic execution.
+
+## 5. Research Agenda
+- zkVM integration for verifiable off-chain execution.
+- Homomorphic encryption support for confidential smart contracts.
+- Adaptive resource pricing via on-chain machine learning.

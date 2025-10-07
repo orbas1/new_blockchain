@@ -1,16 +1,18 @@
-# Penalties Framework
+# Penalty & Slashing Framework
 
-## Objectives
-- Deter malicious behavior by imposing financial or operational consequences.
-- Maintain integrity of consensus and network availability.
+## 1. Objectives
+- Deter malicious behavior, compensate victims, and maintain liveness.
 
-## Penalty Types
-- **Slashing**: Confiscation of stake for double-signing, censorship, or security breaches.
-- **Downtime Penalties**: Reduced rewards or temporary jailing for inactivity.
-- **Reputation Loss**: Lower delegation weight or removal from committees.
-- **Legal/Compliance Actions**: Referral to governing foundation for contractual breaches.
+## 2. Penalty Types
+- Minor faults (downtime) with proportional fines or reward withholding.
+- Severe faults (double-sign, safety violations) leading to stake destruction.
+- Governance offences (vote manipulation, collusion) with social slashing.
 
-## Governance
-- Transparent penalty rules codified in protocol documentation.
-- Appeal process with evidence submission and arbitration timelines.
-- Insurance mechanisms to compensate delegators impacted by validator misconduct.
+## 3. Process
+- Evidence submission, automated verification, appeals pipeline, restitution distribution.
+- Insurance and staking derivatives hedging slashing risk.
+
+## 4. Research Agenda
+- Mechanism design for collusion-resistant penalty schedules.
+- Risk transfer markets (slashing insurance, CDS).
+- Dynamic penalty adjustments using observed network conditions.

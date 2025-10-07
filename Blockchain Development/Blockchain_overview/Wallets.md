@@ -1,22 +1,24 @@
-# Wallets
+# Wallet Infrastructure (Doctoral Expansion)
 
-## Categories
-- **Custodial**: Managed keys (exchanges, fintech apps) with compliance integration.
-- **Non-Custodial**: User-held keys via browser extensions, mobile apps, hardware devices.
-- **Multi-Signature and MPC Wallets**: Shared control for organizations and DAOs.
+## 1. Functional Scope
+- Key custody, transaction assembly, signing, broadcasting, and portfolio analytics.
+- Integrations with dApps, DeFi protocols, identity credentials, and compliance attestations.
 
-## Core Features
-- Key generation (BIP32/39/44, SLIP-0010) with strong entropy.
-- Transaction construction with gas estimation and fee strategy recommendations.
-- Signing workflows: offline signing, QR transfer, hardware wallet integration.
-- Support for smart contract interactions, DeFi protocols, NFTs.
+## 2. Architecture
+- **Client types:** Web, mobile, hardware, custodial, MPC-based enterprise wallets.
+- **Key management:** Hierarchical deterministic wallets (BIP-32), threshold signatures, account abstraction smart contract wallets.
+- **Security layers:** Biometric gating, secure enclaves, phishing resistant UX, transaction simulation.
 
-## Security Enhancements
-- Biometric unlock, secure enclaves, hardware-backed keystores.
-- Session keys and delegated authorization for dApp interactions.
-- Phishing protection via domain binding, transaction simulation.
+## 3. User Experience Considerations
+- Progressive disclosure of risk, transaction previews, and gas estimation.
+- Multi-language support, accessibility features, and compliance prompts for KYC flows.
+- Social recovery, delegated session keys, and privacy-preserving address books.
 
-## Compliance & UX
-- KYC flows for regulated environments.
-- Accessibility (localization, screen readers).
-- Recovery options: social recovery, seedless MPC backups, custody partners.
+## 4. Operational Metrics
+- Signing latency, success rate, device coverage, and security incident frequency.
+- Telemetry privacy: opt-in analytics, differential privacy for aggregate insights.
+
+## 5. Research Directions
+- Account abstraction enabling sponsored transactions and programmable policies.
+- Zero-knowledge proofs for balance attestations without revealing holdings.
+- Interoperable wallets managing cross-chain identities and credentials.

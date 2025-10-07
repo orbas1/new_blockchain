@@ -1,20 +1,26 @@
-# Storage Architecture
+# Storage Architecture (Doctoral Expansion)
 
-## Objectives
-- Durable retention of blockchain data with efficient retrieval.
-- Support archival, full, and light node requirements.
+## 1. Multi-Tier Design
+- **Hot storage:** SSD-backed databases (RocksDB, TiKV) for active state.
+- **Warm storage:** Object stores (S3-compatible) for recent history.
+- **Cold archival:** Tape, glacier storage, or decentralized storage (Arweave, Filecoin) for compliance retention.
 
-## Components
-- Hot storage: SSD arrays for current state and recent blocks.
-- Cold storage: Object storage (S3 compatible) for historical data.
-- Off-chain backups: Distributed storage networks (IPFS/Filecoin, Arweave).
+## 2. Data Layout
+- Columnar encoding for analytics.
+- Versioned key-value stores with snapshot isolation.
+- Content-addressable chunking with deduplication.
 
-## Optimization Techniques
-- Pruning of spent UTXOs and obsolete states.
-- Sparse Merkle Trees enabling stateless clients.
-- Tiered storage policies using block age and access frequency.
+## 3. Reliability & Durability
+- 3-2-1 backup strategy with geographic dispersion.
+- Regular integrity checks (Merkle proofs, checksums).
+- Disaster recovery drills with restore time objectives (RTO/RPO).
 
-## Operational Considerations
-- Encryption at rest, key management, and rotation.
-- Integrity checks via periodic hash verification.
-- Disaster recovery runbooks with RPO/RTO targets.
+## 4. Performance Tuning
+- Prefetch caches for trie nodes.
+- Write-ahead logging and batching.
+- Compression/compaction schedules aligned with consensus cadence.
+
+## 5. Research Agenda
+- Verifiable storage outsourcing with proofs-of-retrievability.
+- Differential privacy for data analytics exports.
+- Green storage metrics incorporating energy per byte.

@@ -1,18 +1,14 @@
 # Workflow Models
 
-## Validator Lifecycle Model
-- **Trigger**: Application approval.
-- **Phases**: Key ceremony → stake bonding → monitoring → rewards → exit.
-- **Artifacts**: Checklists, monitoring dashboards, compliance attestations.
+## 1. Modelling Techniques
+- BPMN, Petri nets, statecharts, and declarative workflow languages.
 
-## Software Release Model
-- Ideation → RFC → implementation → code review → testnet deployment → mainnet release.
-- Gateways: security audit sign-off, governance vote, rollback plan ready.
+## 2. Use Cases
+- Validator lifecycle, treasury disbursements, DAO governance, cross-chain bridging operations.
 
-## Incident Response Model
-- Detection → triage → containment → remediation → post-mortem.
-- RACI matrix defining roles (incident commander, communications lead, technical lead).
+## 3. Tooling
+- Model checking, simulation, and what-if analysis.
 
-## Treasury Grant Model
-- Proposal submission → due diligence → milestone funding → performance evaluation.
-- Impact metrics and clawback provisions defined upfront.
+## 4. Research Agenda
+- Workflow provenance tracking on-chain.
+- AI-assisted optimization of multi-party workflows.

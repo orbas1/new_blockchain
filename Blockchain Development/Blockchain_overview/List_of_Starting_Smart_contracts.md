@@ -1,17 +1,22 @@
-# Initial Smart Contracts
+# Starting Smart Contract Inventory
 
-1. Governance Module
-2. Treasury Vault
-3. Staking & Validator Registry
-4. Delegation and Rewards Distributor
-5. Penalty & Slashing Manager
-6. Fee Splitter Contract
-7. Token Factory (Fungible & Non-Fungible)
-8. Cross-Chain Bridge Adapter
-9. Oracle Registry & Data Feed Manager
-10. Layer-2 Rollup Anchor Contract
-11. NFT Marketplace Core
-12. Identity Credential Registry
-13. DAO Membership Contract
-14. Insurance Pool Contract
-15. Emergency Pause Guardian
+1. ConstitutionModule
+2. VotingHub
+3. DelegateRegistry
+4. TreasuryVault
+5. GrantAllocator
+6. FeeRouter
+7. ValidatorStaking
+8. BridgeGateway
+9. UpgradeController
+10. IdentityPassport
+11. MarketplaceCore
+12. NFTFactory
+13. GuardianMultisig
+14. MetricsEmitter
+15. BugBountyEscrow
+16. ComplianceRegistry
+17. StakingDerivativesManager
+18. CrossChainMessenger
+19. RewardDistributor
+20. InsurancePool

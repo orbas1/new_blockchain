@@ -1,17 +1,21 @@
-# Security Program
+# Security Program (Doctoral Expansion)
 
-## Domains
-- Application security (smart contracts, wallet software).
-- Infrastructure security (nodes, cloud resources, CI/CD pipelines).
-- Operational security (key management, access control, incident response).
+## 1. Governance
+- Security council with rotating membership, emergency response powers, and public accountability reports.
 
-## Controls
-- Multi-factor authentication and hardware security modules for key storage.
-- Regular penetration testing and bug bounty programs.
-- Continuous monitoring (SIEM, anomaly detection, validator behavior analytics).
-- Supply chain security: signed binaries, reproducible builds, dependency auditing.
+## 2. Preventive Controls
+- Secure development lifecycle, mandatory code reviews, formal verification, dependency management with SBOMs.
+- Infrastructure hardening: zero-trust networking, mandatory access controls, log integrity.
 
-## Governance
-- Security council with emergency authority.
-- Disclosure policy aligned with responsible disclosure practices.
-- Compliance alignment (SOC 2, ISO 27001) for enterprise adoption.
+## 3. Detective Controls
+- Continuous monitoring (SIEM), anomaly detection (ML models), honeypots for attackers.
+- Bug bounty and responsible disclosure programs.
+
+## 4. Response & Recovery
+- Incident response runbooks, tabletop exercises, post-incident retrospectives.
+- Disaster recovery with tested backup restores and communication plans.
+
+## 5. Research Agenda
+- Autonomous security agents for continuous testing.
+- Post-quantum cryptographic transition planning.
+- Cyber insurance integration and actuarial modelling.
