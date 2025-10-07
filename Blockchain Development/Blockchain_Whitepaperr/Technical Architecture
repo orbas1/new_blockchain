@@ -1,0 +1,42 @@
+# Technical Architecture
+
+The platform is realized through a layered reference stack that integrates consensus, networking, execution, and data services into a resilient, upgradeable fabric. Each layer adheres to interface contracts that enable independent evolution, fault isolation, and compliance-driven auditability.
+
+## Layered Stack
+1. **Foundation Layer**
+   - **Hardware assumptions**: commodity servers with hardware security modules (HSMs) or secure enclaves for key custody.
+   - **Operating environment**: containerized deployments orchestrated via Kubernetes or validator-managed bare metal.
+   - **Time synchronization**: PTP-enabled clocks with fallback NTP quorum for deterministic block timestamps.
+2. **Networking Layer**
+   - **Transport**: QUIC-based peer-to-peer networking with adaptive congestion control and DoS mitigation via bandwidth tokens.
+   - **Peer discovery**: Kademlia-based DHT with stake-weighted peer scoring and geographic diversity constraints.
+   - **Gossip protocols**: topic-specific pub/sub channels separating consensus votes, block propagation, and telemetry.
+3. **Consensus Layer**
+   - **Hybrid BFT**: leader-rotating HotStuff variant fused with verifiable delay function (VDF) leader election for liveness under partial synchrony.
+   - **Finality gadgets**: multi-round voting with aggregated BLS signatures, providing <6 second finality.
+   - **Slashing and recovery**: deterministic punishment rules for double-signing, equivocation, and availability violations, coupled with state sync to rehydrate honest nodes.
+4. **Execution Layer**
+   - **Virtual machines**: WASM runtime with eBPF acceleration and EVM compatibility via translation layer.
+   - **State management**: Merkle-Patricia trie with sparse Merkle proofs optimized via Poseidon hashing for zero-knowledge compatibility.
+   - **Resource metering**: multi-dimensional fee market (compute, storage, bandwidth) with congestion-sensitive pricing.
+5. **Data Layer**
+   - **Storage**: erasure-coded archival storage, pruning horizons, and availability sampling for light clients.
+   - **Compression**: zk-SNARK anchored rollup commitments and recursive proofs for global state snapshots.
+   - **Indexing**: SQL/OLAP hybrids with streaming pipelines feeding analytics dashboards and regulatory reporting.
+6. **Interface Layer**
+   - **APIs**: GraphQL, gRPC, and REST endpoints with role-based access control and rate limiting.
+   - **SDKs**: language-specific bindings (Rust, TypeScript, Python) for smart-contract deployment and data ingestion.
+   - **Tooling**: CLI, GUI dashboards, and integrations with observability suites (Prometheus, OpenTelemetry).
+
+## Cross-Cutting Concerns
+- **Security**: multi-signature governance for protocol upgrades, hardware root of trust, and layered intrusion detection.
+- **Compliance**: policy engines enforcing KYC/AML rules via attestations, with selective disclosure mechanisms using zero-knowledge proofs.
+- **Observability**: structured logging, distributed tracing, and real-time metrics exported to SOC dashboards.
+- **Upgradeability**: on-chain feature flags, semantic version negotiation, and deterministic replay testing before activation.
+
+## Deployment Topologies
+- **Public mainnet**: globally distributed validators with permissionless participation and economic incentives.
+- **Consortium subnet**: permissioned validator set for regulated industries, inheriting security from the main chain via shared finality checkpoints.
+- **Application rollups**: specialized execution environments with dedicated resource quotas and interoperable bridges.
+
+The technical architecture harmonizes rigorous engineering disciplines with governance-aware flexibility, allowing the network to evolve without sacrificing reliability or security guarantees.

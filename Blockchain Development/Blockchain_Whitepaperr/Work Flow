@@ -1,0 +1,45 @@
+# Work Flow
+
+This chapter decomposes network operations into discrete workflows spanning participant onboarding, transaction processing, governance, and maintenance. Each workflow is modeled as a sequence of verifiable steps with defined inputs, outputs, success criteria, and monitoring checkpoints.
+
+## Participant Lifecycle
+1. **Enrollment**
+   - Identity verification using decentralized identifiers (DIDs) and zero-knowledge credential proofs.
+   - Stake allocation recorded in genesis or via bonding contracts with configurable lock-up periods.
+2. **Validator Activation**
+   - Secure key generation via threshold schemes and HSM-backed custody.
+   - Node attestation process collects hardware, software, and geolocation proofs for compliance review.
+3. **Operational Monitoring**
+   - Continuous health checks via remote attestation, uptime beacons, and telemetry ingestion pipelines.
+   - Automated alerts for double-signing risk, latency spikes, and resource exhaustion.
+4. **Exit / Slashing Resolution**
+   - Unbonding queues with cooling periods and fraud-proof appeals adjudicated by governance committees.
+
+## Transaction Processing Pipeline
+1. **Submission**: wallet or dApp sends transaction to access nodes through authenticated RPC.
+2. **Mempool Admission**: transactions prioritized by multi-dimensional fee scores; policy engine filters non-compliant payloads.
+3. **Consensus Rounds**: leader proposes block; BFT voting and VDF randomness enforce fairness and liveness.
+4. **Execution**: deterministic state transition across the WASM/EVM runtime with gas accounting and failure handling.
+5. **Finalization**: aggregated BLS signatures commit the block; checkpoints anchor to archival nodes and rollups.
+6. **State Distribution**: light clients receive succinct proofs; indexers update analytics warehouses and compliance logs.
+
+## Governance Flow
+- **Proposal Drafting**: stakeholders submit upgrade or policy proposals via DAO portal with supporting research attachments.
+- **Deliberation Phase**: forums, off-chain signaling, and expert panels evaluate technical, legal, and economic implications.
+- **Voting**: quadratic or stake-weighted voting executed on-chain; quorum and supermajority thresholds enforced by smart contracts.
+- **Implementation**: if accepted, upgrade artifacts are tested on canary networks, followed by staged rollout using feature flags.
+
+## Incident Response
+1. **Detection**: anomaly detection pipelines raise alerts for reorganizations, consensus stalls, or suspicious transactions.
+2. **Triage**: security council convenes via secure communication channels; severity assessed against playbooks.
+3. **Containment**: rate limiting, peer isolation, or emergency protocol parameters activated to stabilize the network.
+4. **Recovery**: post-incident state reconciliation, audit logging, and restitution procedures (if funds impacted).
+5. **Post-mortem**: root cause analysis, remediation roadmap, and community transparency report.
+
+## Tooling & Automation
+- Infrastructure-as-code templates for provisioning.
+- CI/CD pipelines for smart contracts and node binaries.
+- Chaos engineering campaigns to validate resilience.
+- Continuous compliance scanning for KYC/AML and data privacy adherence.
+
+The workflows ensure that every actor and subsystem operates within traceable, auditable, and resilient processes, aligning day-to-day operations with the network's strategic commitments.

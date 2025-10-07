@@ -1,0 +1,25 @@
+# Hashing Strategy (Expanded)
+
+## 1. Objectives
+Provide collision-resistant commitments for blocks, transactions, state, and off-chain data feeds while enabling verifiable data structures.
+
+## 2. Algorithm Portfolio
+- **SHA-2/3:** Compatibility with existing ecosystems and hardware acceleration.
+- **BLAKE3:** High throughput, SIMD-friendly for bandwidth-heavy workloads.
+- **Poseidon/Rescue:** SNARK-friendly hashes for zero-knowledge circuits.
+- **KangarooTwelve:** Lightweight sponge construction for embedded devices.
+
+## 3. Engineering Practices
+- Domain separation tags for block headers, transactions, receipts, and consensus messages.
+- Constant-time implementations vetted via side-channel audits.
+- Hash-to-curve support for BLS signatures and VRFs.
+- Periodic algorithm agility reviews for post-quantum preparedness.
+
+## 4. Tooling & Monitoring
+- Hash collision monitoring, differential testing across clients, fuzzers for serialization.
+- Telemetry on hash computation latency to inform hardware investments.
+
+## 5. Research Agenda
+- Verifiable delay hash functions for randomness beacons.
+- Multi-party computation for distributed hashing in rollup circuits.
+- Quantum-resistant hash selection strategies.

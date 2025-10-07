@@ -1,0 +1,22 @@
+# Cryptographic Foundations
+
+## 1. Primitives
+- Digital signatures (Ed25519, BLS12-381, post-quantum candidates).
+- Hash functions (SHA-3, BLAKE3, Poseidon).
+- Key agreement (X25519, ECDH over secp256k1).
+- Zero-knowledge proofs (SNARKs, STARKs, Bulletproofs).
+
+## 2. System Integration
+- Signature aggregation for consensus scalability.
+- Threshold cryptography for MPC custody and DAO key management.
+- Commitment schemes for confidentiality (Pedersen, ElGamal).
+
+## 3. Security Engineering
+- Formal verification of cryptographic implementations (Fiat-Crypto, HACL*).
+- Constant-time, side-channel resistant coding standards.
+- Hardware root of trust (TEE attestation, TPM integration).
+
+## 4. Research Frontier
+- Post-quantum transition roadmap (lattice-based signatures, hash-based accumulators).
+- Succinct proofs for machine learning models embedded in smart contracts.
+- Cryptographic accountability via privacy-preserving audit trails.

@@ -1,0 +1,24 @@
+# Overview
+
+This whitepaper presents the foundational rationale, systemic architecture, and socio-economic design of the blockchain network. It articulates the platform's mission to provide a verifiable execution substrate for multi-industry digital transformation while satisfying institutional expectations for compliance, resilience, and innovation velocity.
+
+## Guiding Principles
+- **Human-centric design** balances decentralization with predictable user experiences, lowering barriers to participation.
+- **Scientific rigor** leverages peer-reviewed cryptography, formal verification, and empirical performance measurements.
+- **Composable modularity** ensures every subsystem—consensus, networking, execution, data, and economics—can evolve independently.
+- **Open governance** embeds community deliberation, regulatory oversight, and transparent treasury operations.
+
+## Structural Pillars
+1. **Consensus Plane**: hybrid Byzantine fault-tolerant consensus, optimized for fast finality and strong safety guarantees.
+2. **Execution Plane**: multi-VM runtime supporting deterministic smart contracts, state channels, and rollup frameworks.
+3. **Data Plane**: verifiable storage with pruning, compression, and zero-knowledge snapshot options.
+4. **Economic Plane**: tokenized incentives, fee distribution, and risk mitigation mechanics aligned to long-term sustainability.
+
+## Document Map
+- **Technical Architecture** details protocol layers, interoperability surfaces, and lifecycle management.
+- **Consensus, Network, and Native Coin** chapters expound on security, performance, and macroeconomic policy.
+- **Analytics, Metrics, and Modeling** sections formalize monitoring frameworks for on-chain and off-chain observability.
+- **Governance & Interfaces** chapters outline GUIs, APIs, and CLIs that facilitate developer and stakeholder engagement.
+- **Conclusion** synthesizes strategic outcomes, roadmap milestones, and future research vectors.
+
+This overview contextualizes subsequent chapters, ensuring stakeholders can navigate the technical depth with a coherent mental model of the entire system.
