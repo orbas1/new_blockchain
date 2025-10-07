@@ -1,0 +1,25 @@
+Hashing Strategies
+==================
+
+Purpose
+-------
+- Provide collision-resistant commitments for blocks, transactions, and state.
+- Enable Merkle tree constructions and succinct proofs.
+
+Algorithms
+----------
+- SHA-2 family for compatibility.
+- SHA-3/Keccak for Ethereum-style addresses.
+- BLAKE3 for high throughput and SIMD acceleration.
+- Poseidon/Rescue for zero-knowledge friendly hashing inside circuits.
+
+Implementation Notes
+--------------------
+- Constant-time implementations to avoid timing leaks.
+- Domain separation tags for different object types.
+- Support for hash-to-curve operations (BLS signatures, VRFs).
+
+Roadmap
+-------
+- Evaluate post-quantum hash functions.
+- Hardware acceleration via Intel SHA extensions and ARM Cryptography Extensions.
